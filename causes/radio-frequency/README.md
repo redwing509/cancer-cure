@@ -16,6 +16,11 @@ This branch has no preferred answer. The existence of a scientific debate is not
 
 IARC’s 2011 classification of RF-EMF, often described as Group 2B, is a starting lead to **open and quote** (Monograph 102). A classification is not a substitute for reading the underlying studies, and this outline does not treat Group 2B as proof that RF fields cause cancer, or as proof that they do not.
 
+
+## Per-case rule
+
+Follow the per-case rule in [`METHOD.md`](../../METHOD.md). Radio-frequency fields are not to be treated as one universal cause of cancer. Organize later causation evidence **by cancer type and body site** (for example a glioma finding is not an acoustic-neuroma finding, and an animal heart-schwannoma finding is not a human brain-tumor finding). Quote null and positive results next to the type and site they apply to. Keep phone-use studies distinct from high-power occupational and radar studies, and keep the frequency-selection question distinct from causation.
+
 ## Starting sources to open in the evidence PR
 
 These titles are a search list, not findings. Do not copy numbers, confidence intervals, or animal-tumor counts from memory. If a source cannot be opened legitimately, write `NOT FOUND` or “paywalled; no legitimate open copy found.”
@@ -34,8 +39,8 @@ For each opened source, quote the measured result (human epidemiology or animal 
 
 1. Pass 1 — SOURCES OPENED
 2. Official classifications and what they do and do not mean (IARC and any later official reviews that can be opened)
-3. Human observational studies (Interphone, Danish cohort, and others actually opened)
-4. Animal studies (NTP, Ramazzini, and others actually opened)
+3. Human observational studies (Interphone, Danish cohort, and others actually opened), organized by cancer type and body site
+4. Animal studies (NTP, Ramazzini, and others actually opened), organized by cancer type and body site or organ as the source names them
 5. Systematic reviews, including the 2024 WHO-commissioned review and opened critiques
 6. High-power occupational and radar studies
 7. Assessment — what the opened evidence can and cannot support, with evidence levels in view, including null results
@@ -45,6 +50,6 @@ The frequency-selection evidence review has its own layout in [`frequency-select
 
 ## Method
 
-Follow [`METHOD.md`](../../METHOD.md). Quote measured results only. Do not pre-judge this candidate in our own voice until the evidence PR has been citation-checked. No Sci-Hub, Library Genesis, or raw paywalled PDFs.
+Follow [`METHOD.md`](../../METHOD.md), including the per-case rule. Quote measured results only, by cancer type and body site. Do not pre-judge this candidate in our own voice until the evidence PR has been citation-checked. No Sci-Hub, Library Genesis, or raw paywalled PDFs.
 
 Until that PR is checked and merged, this branch has **no conclusion**.

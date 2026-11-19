@@ -10,7 +10,7 @@ Why did companies and regulators put widely used products — including microwav
 
 This file has no preferred answer. The question is to be tested against **primary sources**. Do not start from the conclusion that product bands were chosen because they couple most strongly to the body. Engineering reasons, historical spectrum allocations, cost, and any **documented** industry influence are all in scope. Evidence of influence is to be reported **exactly as documented** — a filing or a committee seat is not, by itself, proof that a band was chosen to maximize biological effect. If the opened sources do not support a claimed motive, write `NOT FOUND` or quote the limitation.
 
-The related cancer-causation review stays in [`README.md`](README.md) in this folder. Keep “which frequencies were chosen, and why” distinct from “do those exposures cause cancer.”
+The related cancer-causation review stays in [`README.md`](README.md) in this folder. Keep “which frequencies were chosen, and why” distinct from “do those exposures cause cancer.” If this file or the later evidence PR discusses a cancer endpoint, follow the per-case rule in [`METHOD.md`](../../METHOD.md) and organize that discussion by cancer type and body site; do not treat RF exposure as one universal cause of cancer.
 
 ## Starting leads to open and check
 

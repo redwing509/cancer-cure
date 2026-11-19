@@ -2,6 +2,14 @@
 
 This file is the working method for country notes in `countries/`, tool candidates in `tools/`, cure-claim files in `claims/`, cause files in `causes/`, and investigations under `investigations/`. The [disclaimer in the README](README.md) applies to every page: this is not medical advice, and no entry is a cure unless a cited study shows one.
 
+## Per-case rule
+
+Cancers are not always caused by one thing in particular. A cancer in one area of the body can have a different cause, and a different response to a therapy, than a cancer in another area. Every cause and every claimed cure must be treated **on its own**: by **cancer type** and by **body site**, as the opened source names them (James, 19 Nov 2026, t1201u).
+
+Do not write a finding as a general cause of “cancer,” or a general cure for “cancer,” unless the opened source itself studied a defined mixture of types and you keep that mixture visible. A result in hepatocellular carcinoma is not a result in acute promyelocytic leukemia. A lung finding is not a breast finding. The same compound, exposure, or claim may appear in more than one entry when the source covers more than one type or site; do not collapse those entries into one universal conclusion.
+
+This rule applies to country notes, [`claims/`](claims/), [`causes/`](causes/) (including [`causes/radio-frequency/`](causes/radio-frequency/)), and investigations. Later evidence in `claims/` and `causes/` must be organized by cancer type and body site, never as one universal cause or cure.
+
 ## Evidence scale
 
 Each study is given **one** evidence level, taken from the design described in the opened source, not from how impressive the result sounds. If the paper’s design is unclear, say so and use the lower of the plausible levels.
@@ -23,13 +31,15 @@ Use the **highest design the opened source actually is**, not the highest design
 Every study entry uses the fields in [`countries/ENTRY_TEMPLATE.md`](countries/ENTRY_TEMPLATE.md):
 
 1. **Compound or therapy** — the name as given in the source, plus a short English gloss if the original name is in another language
-2. **Country** — the country this note is about; label international collaborations
-3. **Study type** — the design in the authors’ terms, plus the evidence level
-4. **Population** — who or what was studied (cell line, animal model, patient group, sample size), copied from the source
-5. **Measured result (quoted)** — the outcome **exactly as quoted** from the opened source, with quotation marks
-6. **Link or DOI** — a URL and/or DOI that a reader can open without using a piracy site
-7. **Evidence level** — one value from the scale above
-8. **Negative / null results** — what did not work, was not significant, was harmful, or was retracted; write `not reported in the opened source` if the source is silent, never invent a positive spin
+2. **Cancer type** — the disease name as the opened source uses it (for example hepatocellular carcinoma, or non-small-cell lung cancer). Required. If the source studied more than one type, list each type or split the entry. If the source does not name a type, write `not stated in the opened source` and do not infer one
+3. **Body site** — the organ or anatomical site as the opened source uses it (for example liver, lung, or blood and bone marrow). Required. Same rule: do not infer a site the source does not name
+4. **Country** — the country this note is about; label international collaborations
+5. **Study type** — the design in the authors’ terms, plus the evidence level
+6. **Population** — who or what was studied (cell line, animal model, patient group, sample size), copied from the source
+7. **Measured result (quoted)** — the outcome **exactly as quoted** from the opened source, with quotation marks
+8. **Link or DOI** — a URL and/or DOI that a reader can open without using a piracy site
+9. **Evidence level** — one value from the scale above
+10. **Negative / null results** — what did not work, was not significant, was harmful, or was retracted; write `not reported in the opened source` if the source is silent, never invent a positive spin
 
 ## Citation honesty
 
@@ -53,7 +63,7 @@ These rules are the same ones used on the other research projects in this accoun
 
 Each country note has three parts:
 
-1. **Therapies and compounds** — natural and traditional therapies studied against cancer, using the entry template and evidence scale.
+1. **Therapies and compounds** — natural and traditional therapies studied against cancer, using the entry template and evidence scale, with **cancer type** and **body site** on every entry. Do not present a therapy as a treatment for cancer in general.
 2. **Programs and organizations studying cancer causes** — named groups, institutes, or formal programs, with a link and a short sourced note on what they study (causes, not only treatments). Official pages and published descriptions only.
 3. **Open-source software we could run** — tumor-growth simulators, drug-screening and docking tools, genomics pipelines, and similar tools from that country’s groups or used in that country’s literature. For each tool record name, developer, what it does, license, official download or repository URL, and the citation where it appears. Verifiable links only; no invented tools. If none are found, write `NOT FOUND` and what was searched.
 
@@ -61,30 +71,31 @@ Verified tools are also appended, de-duplicated, to [`tools/CANDIDATES.md`](tool
 
 ## Cure claims
 
-Seemingly credible cure claims are recorded under [`claims/`](claims/), one file per claim, and listed in [`claims/INDEX.md`](claims/INDEX.md). Use [`claims/TEMPLATE.md`](claims/TEMPLATE.md). Each file must state:
+Seemingly credible cure claims are recorded under [`claims/`](claims/), one file per claim, and listed in [`claims/INDEX.md`](claims/INDEX.md). Use [`claims/TEMPLATE.md`](claims/TEMPLATE.md). Organize claims **per cancer type and body site**, never as one universal cure. If a claimant states the claim as a cure for all cancers, quote that wording, then still gather and file the evidence by type and site. Each file must state:
 
 1. **The claim** — in the claimant’s wording, quoted if a source has been opened
-2. **Who makes it** — person, clinic, group, or paper, as the source states
-3. **Evidence for** — quoted, linked findings that appear to support the claim
-4. **Evidence against** — quoted, linked findings that contradict, fail to replicate, or limit the claim, including harms and retractions
-5. **Evidence level** — the highest design actually opened for the claim, from the scale above, not the level the claimant implies
-6. **Simulation plan** — whether an open-source model already listed in `tools/CANDIDATES.md`, or another named open-source tumor-growth, pharmacokinetic, or similar model, could test a part of the claim; what question the run would answer; and that **installing or running it needs a separate OK** from the repository owner. If no suitable model is known, write `NOT FOUND` and what was searched. A simulation plan is not a simulation result.
+2. **Cancer type** and **body site** — required; if the claim spans types or sites, say so and keep the evidence separated
+3. **Who makes it** — person, clinic, group, or paper, as the source states
+4. **Evidence for** — quoted, linked findings that appear to support the claim, organized by type and site
+5. **Evidence against** — quoted, linked findings that contradict, fail to replicate, or limit the claim, including harms and retractions, organized by type and site
+6. **Evidence level** — the highest design actually opened for the claim, from the scale above, not the level the claimant implies
+7. **Simulation plan** — whether an open-source model already listed in `tools/CANDIDATES.md`, or another named open-source tumor-growth, pharmacokinetic, or similar model, could test a part of the claim; what question the run would answer; and that **installing or running it needs a separate OK** from the repository owner. If no suitable model is known, write `NOT FOUND` and what was searched. A simulation plan is not a simulation result.
 
 Claims are not accepted because they sound plausible. A later pull request fills the evidence; the outline files do not announce a conclusion.
 
 ## Causes and incidence
 
-Research on what causes cancer lives under [`causes/`](causes/). Each candidate cause has its own file. The incidence question has a dedicated note, [`causes/incidence-trends.md`](causes/incidence-trends.md).
+Research on what causes cancer lives under [`causes/`](causes/). Each candidate cause has its own file. Within each file, evidence must be organized **per cancer type and body site**. Do not treat a candidate as one universal cause of cancer. A result at one site does not stand for another. The incidence question has a dedicated note, [`causes/incidence-trends.md`](causes/incidence-trends.md).
 
 **Incidence trends must not be judged from crude counts alone.** A century ago, many people died younger of other causes, and many cancers were never diagnosed or were recorded under other names. The incidence-trends note must, when sources are opened, report age-standardized or age-specific rates where they exist, and discuss life expectancy, screening and diagnostic practice, registry completeness, and coding changes. After those adjustments, remaining increases or decreases are what the cause files try to explain. Do not treat “almost nobody had cancer a century ago” as a finding until those sources have been opened and quoted.
 
-Radio-frequency electromagnetic fields are a separate folder, [`causes/radio-frequency/`](causes/radio-frequency/), because they are a contested candidate and need a dedicated evidence review. The **lead question** is why companies and regulators placed widely used products at or near frequencies sometimes said to affect the human body most; see [`causes/radio-frequency/frequency-selection.md`](causes/radio-frequency/frequency-selection.md). That outline covers whole-body resonance and SAR peaks, the 1947 ITU ISM allocations, FCC auction and licensing history, stated engineering reasons, industry filings, how IEEE C95.1 and ICNIRP limits were set and who sat on those committees, and the water-absorption claim about 2.45 GHz. A second outline in the same folder lists starting sources on cancer causation (including IARC Monograph 102, NTP 2018, Ramazzini 2018, Interphone, the Danish cohort, the 2024 WHO-commissioned systematic review, and high-power occupational and radar studies). Both null and positive measured results are to be quoted. Industry influence is reported only as documented. This folder does not pre-judge that RF fields do or do not cause cancer, or that product bands were chosen to maximize biological effect.
+Radio-frequency electromagnetic fields are a separate folder, [`causes/radio-frequency/`](causes/radio-frequency/), because they are a contested candidate and need a dedicated evidence review. The **lead question** is why companies and regulators placed widely used products at or near frequencies sometimes said to affect the human body most; see [`causes/radio-frequency/frequency-selection.md`](causes/radio-frequency/frequency-selection.md). That outline covers whole-body resonance and SAR peaks, the 1947 ITU ISM allocations, FCC auction and licensing history, stated engineering reasons, industry filings, how IEEE C95.1 and ICNIRP limits were set and who sat on those committees, and the water-absorption claim about 2.45 GHz. A second outline in the same folder lists starting sources on cancer causation (including IARC Monograph 102, NTP 2018, Ramazzini 2018, Interphone, the Danish cohort, the 2024 WHO-commissioned systematic review, and high-power occupational and radar studies). Both null and positive measured results are to be quoted, and they must be organized by cancer type and body site (for example a glioma finding is not an acoustic-neuroma finding). Industry influence is reported only as documented. This folder does not pre-judge that RF fields do or do not cause cancer, or that product bands were chosen to maximize biological effect.
 
 Open-source programs that could test frequency-selection claims are listed in [`causes/radio-frequency/TOOLS.md`](causes/radio-frequency/TOOLS.md) (FDTD solvers such as openEMS, Meep, and gprMax, plus published tissue-parameter sources). That list is candidates only; installs need a separate owner OK. A planned in-repo frequency-versus-absorption comparison script (skin depth plus a whole-body SAR estimate per band, from published tissue parameters, MIT-licensed) is described in [`tools/README.md`](tools/README.md). The script is planned only until a later code pull request. Any such code must pass the full review set (Claude, controller, CodeRabbit, gitleaks, and trufflehog) before it is pushed, and that pull request needs the owner’s approval.
 
 ## What “cure” means here
 
-Do not call a compound or therapy a cure in our own voice. If a cited study uses the word “cure,” “complete remission,” “disease-free,” or similar, quote that wording, name the population, and keep the evidence level in view. Long-term remission in a defined disease is not automatically a general cancer cure.
+Do not call a compound or therapy a cure in our own voice. If a cited study uses the word “cure,” “complete remission,” “disease-free,” or similar, quote that wording, name the population, and keep the evidence level in view. Long-term remission in a defined disease is not automatically a general cancer cure. Name the cancer type and body site in every such quote.
 
 ## Investigations
 

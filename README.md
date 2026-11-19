@@ -15,7 +15,7 @@ Traditional use is not the same thing as clinical evidence. A laboratory result 
 
 ## Start here
 
-- [`METHOD.md`](METHOD.md) — how entries are written, the evidence scale, the citation rules, and how programs, tools, claims, and causes are recorded
+- [`METHOD.md`](METHOD.md) — how entries are written, the evidence scale, the **per-case rule** (every cause and claimed cure is treated by cancer type and body site, never as one universal cause or cure), the citation rules, and how programs, tools, claims, and causes are recorded
 - [`countries/ENTRY_TEMPLATE.md`](countries/ENTRY_TEMPLATE.md) — the fields every study entry must fill
 - [`countries/`](countries/) — one file per country, added through pull requests after a citation check
 - [`claims/INDEX.md`](claims/INDEX.md) — seemingly credible cure claims, one file per claim, with evidence for and against and a simulation plan
@@ -46,6 +46,7 @@ Out of scope for the public notes: copyrighted PDFs, paywalled full text, materi
 - Research is searched in the country’s native or main research language. Notes are written in English; original titles are kept.
 - On contested claims, including whether cancer is a fungus, whether a named therapy is a cure, and whether radio-frequency fields cause cancer, both supporting and opposing published evidence are collected. The write-up does not pre-judge the result.
 - Historical incidence must be discussed with age-standardized rates and with changes in life expectancy and diagnosis, not crude counts alone.
+- Every cause and every claimed cure is treated on its own, by cancer type and body site. A finding in one type or site is not a finding in another, and is not a general cause or cure of cancer.
 
 ## License
 

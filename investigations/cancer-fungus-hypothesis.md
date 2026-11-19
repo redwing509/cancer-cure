@@ -12,11 +12,13 @@ This investigation has no preferred answer. The job is to **prove or disprove** 
 
 A finding that some tumors contain fungi, or that fungi can influence a tumor, would not by itself prove that cancer *is* a fungus. Those are different claims, and they will be kept separate.
 
+Follow the per-case rule in [`METHOD.md`](../METHOD.md). The claim is often stated as applying to cancer in general; the evidence must still be gathered **per cancer type and body site**. A mycobiome or bicarbonate finding in one tumor type or organ is not a finding for all cancers, and is not a universal cure.
+
 ## What will be gathered (both sides)
 
 The later evidence PR should collect, quote, and grade sources in all of the following buckets. A bucket with no opened source is marked `NOT FOUND`, not filled from memory.
 
-1. **Claimed cures and case reports** — publications, books, clinic pages, and case reports that present bicarbonate, antifungal, or “cancer is a fungus” treatment as curing cancer. Quote the measured or described outcomes, the population, and the study design. Record follow-up time when the source gives it.
+1. **Claimed cures and case reports** — publications, books, clinic pages, and case reports that present bicarbonate, antifungal, or “cancer is a fungus” treatment as curing cancer. Quote the measured or described outcomes, the **cancer type**, the **body site**, the population, and the study design. Record follow-up time when the source gives it. Do not pool unlike types into one cure tally.
 2. **Tumor mycobiome and related microbiology** — peer-reviewed research on fungi in tumors or in people with cancer. A starting lead to *open and check* in the evidence PR (not a finding of this outline) is the 2022 *Cell* paper associated with Narunsky-Haziza, and later reanalyses or critiques of that paper and of related tumor-microbiome work. Quote what each opened paper actually measured, including negative or failed replications.
 3. **Clinical trials of bicarbonate or antifungal therapy in cancer** — registered or published interventional studies, whatever their result. Include symptom-control or quality-of-life trials if that is what was studied, and do not relabel them as cure trials.
 4. **Regulatory, professional-body, and court records** — official actions, findings, or judgments that bear on Simoncini, bicarbonate-as-cancer-cure claims, or related clinic practices. Use primary records (court, regulator, or licensing-body pages) where they can be opened. News reports are secondary unless the official record cannot be found, and must be labeled as such.
@@ -24,7 +26,7 @@ The later evidence PR should collect, quote, and grade sources in all of the fol
 
 ## Method
 
-Follow [`METHOD.md`](../METHOD.md) in full:
+Follow [`METHOD.md`](../METHOD.md) in full, including the per-case rule:
 
 - Two passes: a **SOURCES OPENED** list first, then findings only from that list.
 - Every factual claim needs a direct quote plus a URL or DOI from an opened source (`full text`, `abstract only`, or `not opened`).

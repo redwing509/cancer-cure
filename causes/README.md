@@ -4,10 +4,15 @@ This folder collects research on **what causes cancer** and on **why reported in
 
 **This is not medical advice.** Read the [disclaimer in the README](../README.md). A file here is a candidate to be tested, not a verdict.
 
+
+## Per-case rule
+
+Cancers are not always caused by one thing, and a cause at one body site is not automatically a cause at another. Follow the per-case rule in [`METHOD.md`](../METHOD.md). Organize every candidate **per cancer type and body site**. Do not treat a file in this folder, including [`radio-frequency/`](radio-frequency/), as one universal cause of cancer. A lung finding is not a breast finding. Site-specific absences and null results belong in the same file, next to the site they apply to.
+
 ## How to read this folder
 
 1. Start with [`incidence-trends.md`](incidence-trends.md). Crude case counts over a century are not enough. The note must adjust for age, life expectancy, and diagnosis rates before a remaining change is treated as a clue about causes.
-2. Then read one file per candidate cause. Each file gathers published evidence for and against that candidate, with quoted measured results and an evidence level.
+2. Then read one file per candidate cause. Each file gathers published evidence for and against that candidate, **organized by cancer type and body site**, with quoted measured results and an evidence level. Do not read a filename as a universal cause.
 3. Radio-frequency electromagnetic fields have their own folder: [`radio-frequency/`](radio-frequency/). Start with the lead question in [`radio-frequency/frequency-selection.md`](radio-frequency/frequency-selection.md).
 
 All files below are **outline and method only** until a later, citation-checked pull request fills them. Do not take a filename as proof that the candidate is a cause.
