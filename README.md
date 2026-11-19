@@ -20,7 +20,7 @@ Traditional use is not the same thing as clinical evidence. A laboratory result 
 - [`countries/`](countries/) — one file per country, added through pull requests after a citation check
 - [`claims/INDEX.md`](claims/INDEX.md) — seemingly credible cure claims, one file per claim, with evidence for and against and a simulation plan
 - [`causes/`](causes/) — research on cancer causes, including [`causes/incidence-trends.md`](causes/incidence-trends.md) and candidate-cause files
-- [`causes/radio-frequency/`](causes/radio-frequency/) — radio-frequency electromagnetic fields as their own branch
+- [`causes/radio-frequency/`](causes/radio-frequency/) — radio-frequency electromagnetic fields as their own branch, led by [`causes/radio-frequency/frequency-selection.md`](causes/radio-frequency/frequency-selection.md) (why product bands sit where they do)
 - [`tools/CANDIDATES.md`](tools/CANDIDATES.md) — open-source research software found in the surveys (candidates only; installs need a separate OK)
 - [`investigations/cancer-fungus-hypothesis.md`](investigations/cancer-fungus-hypothesis.md) — outline and method for testing the “cancer is a fungus” claim (full evidence review is a later pull request)
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — how to suggest a correction or a new source

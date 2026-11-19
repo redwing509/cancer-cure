@@ -4,7 +4,11 @@
 
 **This is not medical advice.** Read the [disclaimer in the README](../../README.md).
 
-## Question
+## Lead question
+
+The lead question for this branch is **why widely used products were placed at or near frequencies sometimes said to affect the human body most**. See [`frequency-selection.md`](frequency-selection.md) for the outline: whole-body resonance and SAR peaks, the 1947 ITU ISM allocations, FCC auction and licensing history, stated engineering reasons, industry filings, IEEE C95.1 and ICNIRP committee process, and the water-absorption claim about 2.45 GHz. That file is outline and method only.
+
+## Cancer-causation question
 
 Do **radio-frequency electromagnetic fields (RF-EMF)**, including from wireless communications and from high-power occupational or radar sources, cause cancer in humans, and if so at what exposures and at which sites?
 
@@ -36,6 +40,8 @@ For each opened source, quote the measured result (human epidemiology or animal 
 6. High-power occupational and radar studies
 7. Assessment — what the opened evidence can and cannot support, with evidence levels in view, including null results
 8. Open questions and `NOT FOUND` areas
+
+The frequency-selection evidence review has its own layout in [`frequency-selection.md`](frequency-selection.md).
 
 ## Method
 
