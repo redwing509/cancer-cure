@@ -1,6 +1,6 @@
 # Method
 
-This file is the working method for every country note in `countries/`, for tool candidates in `tools/`, and for investigations under `investigations/`. The [disclaimer in the README](README.md) applies to every page: this is not medical advice, and no entry is a cure unless a cited study shows one.
+This file is the working method for country notes in `countries/`, tool candidates in `tools/`, cure-claim files in `claims/`, cause files in `causes/`, and investigations under `investigations/`. The [disclaimer in the README](README.md) applies to every page: this is not medical advice, and no entry is a cure unless a cited study shows one.
 
 ## Evidence scale
 
@@ -33,7 +33,7 @@ Every study entry uses the fields in [`countries/ENTRY_TEMPLATE.md`](countries/E
 
 ## Citation honesty
 
-These rules are the same ones used on the other research projects in this account (James, 15 Nov 2026, t1084u). They apply to country notes, tool candidates, and investigations.
+These rules are the same ones used on the other research projects in this account (James, 15 Nov 2026, t1084u). They apply to country notes, tool candidates, claims, causes, and investigations.
 
 1. **Quote plus locator.** Every factual claim includes a direct quote of the supporting sentence and that source’s URL or DOI. Drop any claim that lacks both.
 2. **`NOT FOUND`, never a guess.** When a search finds nothing, write `NOT FOUND` and say what was searched. Never fill gaps from memory.
@@ -59,6 +59,27 @@ Each country note has three parts:
 
 Verified tools are also appended, de-duplicated, to [`tools/CANDIDATES.md`](tools/CANDIDATES.md). That list is **candidates only**. Installing any tool still needs a separate OK from the repository owner. A row in the list is not permission to install, download a new package, or accept a license.
 
+## Cure claims
+
+Seemingly credible cure claims are recorded under [`claims/`](claims/), one file per claim, and listed in [`claims/INDEX.md`](claims/INDEX.md). Use [`claims/TEMPLATE.md`](claims/TEMPLATE.md). Each file must state:
+
+1. **The claim** — in the claimant’s wording, quoted if a source has been opened
+2. **Who makes it** — person, clinic, group, or paper, as the source states
+3. **Evidence for** — quoted, linked findings that appear to support the claim
+4. **Evidence against** — quoted, linked findings that contradict, fail to replicate, or limit the claim, including harms and retractions
+5. **Evidence level** — the highest design actually opened for the claim, from the scale above, not the level the claimant implies
+6. **Simulation plan** — whether an open-source model already listed in `tools/CANDIDATES.md`, or another named open-source tumor-growth, pharmacokinetic, or similar model, could test a part of the claim; what question the run would answer; and that **installing or running it needs a separate OK** from the repository owner. If no suitable model is known, write `NOT FOUND` and what was searched. A simulation plan is not a simulation result.
+
+Claims are not accepted because they sound plausible. A later pull request fills the evidence; the outline files do not announce a conclusion.
+
+## Causes and incidence
+
+Research on what causes cancer lives under [`causes/`](causes/). Each candidate cause has its own file. The incidence question has a dedicated note, [`causes/incidence-trends.md`](causes/incidence-trends.md).
+
+**Incidence trends must not be judged from crude counts alone.** A century ago, many people died younger of other causes, and many cancers were never diagnosed or were recorded under other names. The incidence-trends note must, when sources are opened, report age-standardized or age-specific rates where they exist, and discuss life expectancy, screening and diagnostic practice, registry completeness, and coding changes. After those adjustments, remaining increases or decreases are what the cause files try to explain. Do not treat “almost nobody had cancer a century ago” as a finding until those sources have been opened and quoted.
+
+Radio-frequency electromagnetic fields are a separate folder, [`causes/radio-frequency/`](causes/radio-frequency/), because they are a contested candidate and need a dedicated evidence review. The outline lists the starting sources to open (including IARC Monograph 102, NTP 2018, Ramazzini 2018, Interphone, the Danish cohort, the 2024 WHO-commissioned systematic review, and high-power occupational and radar studies). Both null and positive measured results are to be quoted. This folder does not pre-judge that RF fields do or do not cause cancer.
+
 ## What “cure” means here
 
 Do not call a compound or therapy a cure in our own voice. If a cited study uses the word “cure,” “complete remission,” “disease-free,” or similar, quote that wording, name the population, and keep the evidence level in view. Long-term remission in a defined disease is not automatically a general cancer cure.
@@ -67,4 +88,4 @@ Do not call a compound or therapy a cure in our own voice. If a cited study uses
 
 Some questions cut across countries and need a dedicated file under `investigations/`. They use the same citation-honesty rules and the same evidence scale. The write-up gathers published evidence on **both sides** of the claim, quotes measured results only, and does not announce a conclusion before the sources have been opened and checked.
 
-The first investigation is [`investigations/cancer-fungus-hypothesis.md`](investigations/cancer-fungus-hypothesis.md): whether cancer is a fungus, including claims about sodium bicarbonate treatment. The outline and method are in that file now. The full, citation-checked evidence review will come in a later pull request. Evidence decides.
+The first investigation is [`investigations/cancer-fungus-hypothesis.md`](investigations/cancer-fungus-hypothesis.md): whether cancer is a fungus, including claims about sodium bicarbonate treatment. It is also listed in `claims/INDEX.md`. The outline and method are in that file now. The full, citation-checked evidence review will come in a later pull request. Evidence decides.
