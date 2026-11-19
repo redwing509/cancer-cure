@@ -6,7 +6,7 @@
 
 ## Lead question
 
-The lead question for this branch is **why widely used products were placed at or near frequencies sometimes said to affect the human body most**. See [`frequency-selection.md`](frequency-selection.md) for the outline: whole-body resonance and SAR peaks, the 1947 ITU ISM allocations, FCC auction and licensing history, stated engineering reasons, industry filings, IEEE C95.1 and ICNIRP committee process, and the water-absorption claim about 2.45 GHz. That file is outline and method only.
+The lead question for this branch is **why widely used products were placed at or near frequencies sometimes said to affect the human body most**. See [`frequency-selection.md`](frequency-selection.md) for the outline, and [`TOOLS.md`](TOOLS.md) for open-source programs that could test the physical part of those claims (candidates only; installs need a separate OK): whole-body resonance and SAR peaks, the 1947 ITU ISM allocations, FCC auction and licensing history, stated engineering reasons, industry filings, IEEE C95.1 and ICNIRP committee process, and the water-absorption claim about 2.45 GHz. That file is outline and method only.
 
 ## Cancer-causation question
 

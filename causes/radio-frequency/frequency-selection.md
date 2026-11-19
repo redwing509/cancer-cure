@@ -57,6 +57,12 @@ A common claim is that 2.45 GHz was chosen because it is the peak absorption fre
 9. Assessment — what the opened evidence can and cannot support about *why* these bands were chosen, kept separate from the cancer-causation question
 10. Open questions and `NOT FOUND` areas
 
+## How the physical claims will be tested
+
+Programs that could test absorption, skin depth, and coupling across bands are listed in [`TOOLS.md`](TOOLS.md). They are candidates only; installs need a separate owner OK. A planned in-repo script, described in [`../../tools/README.md`](../../tools/README.md), would compare skin depth and a whole-body SAR estimate per band from published tissue parameters. That script is planned only. Any later code must be reviewed (Claude, controller, CodeRabbit, gitleaks, and trufflehog) before it is pushed, and its pull request needs the owner’s approval.
+
+A model result can support or weaken a claim about *which frequencies couple more strongly*. It cannot, by itself, establish the historical motive for choosing a band. Keep those questions separate.
+
 ## Method
 
 Follow [`METHOD.md`](../../METHOD.md). Prefer primary documents over secondary summaries. Quote measured or officially stated figures only. Stay neutral. No Sci-Hub, Library Genesis, or raw paywalled PDFs.

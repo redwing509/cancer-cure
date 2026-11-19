@@ -23,5 +23,6 @@ All files below are **outline and method only** until a later, citation-checked 
 | [`inherited-and-reproductive.md`](inherited-and-reproductive.md) | Inherited predisposition and reproductive or hormonal factors | Outline only |
 | [`radio-frequency/`](radio-frequency/) | Radio-frequency electromagnetic fields (own branch) | Outline only |
 | [`radio-frequency/frequency-selection.md`](radio-frequency/frequency-selection.md) | Why product bands sit at or near frequencies said to affect the body most (lead RF question) | Outline only |
+| [`radio-frequency/TOOLS.md`](radio-frequency/TOOLS.md) | Open-source programs and tissue-parameter sources to test those claims | Candidates only; no installs |
 
 New candidate files may be added when a sourced reason exists to treat them as distinct. Merges to `main` need the repository owner’s approval.
