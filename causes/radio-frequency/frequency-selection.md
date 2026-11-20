@@ -59,7 +59,7 @@ A common claim is that 2.45 GHz was chosen because it is the peak absorption fre
 
 ## How the physical claims will be tested
 
-Programs that could test absorption, skin depth, and coupling across bands are listed in [`TOOLS.md`](TOOLS.md). They are candidates only; installs need a separate owner OK. A planned in-repo script, described in [`../../tools/README.md`](../../tools/README.md), would compare skin depth and a whole-body SAR estimate per band from published tissue parameters. That script is planned only. Any later code must be reviewed (Claude, controller, CodeRabbit, gitleaks, and trufflehog) before it is pushed, and its pull request needs the owner’s approval.
+Programs that could test absorption, skin depth, and coupling across bands are listed in [`TOOLS.md`](TOOLS.md). They are candidates only; installs need a separate owner OK. An in-repo script, `tools/frequency_absorption`, now computes skin depth and a simplified whole-body SAR *estimate* per opened product band from the opened Gabriel 1996 4-Cole-Cole parameters. The table and plot are in [`frequency-absorption.md`](frequency-absorption.md) (with [`frequency-absorption-method.md`](frequency-absorption-method.md)). The output is a first-order estimate, not a finding about why a band was chosen, and not a ranking of “safer” frequencies. That claim remains a claim to test.
 
 A model result can support or weaken a claim about *which frequencies couple more strongly*. It cannot, by itself, establish the historical motive for choosing a band. Keep those questions separate.
 
