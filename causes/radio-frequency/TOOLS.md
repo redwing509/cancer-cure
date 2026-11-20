@@ -6,7 +6,7 @@
 
 These programs are for testing physical and engineering claims in [`frequency-selection.md`](frequency-selection.md): how absorption, skin depth, and coupling change with frequency, and how that compares across bands actually used for products. They cannot, by themselves, prove *why* a company or regulator chose a band. A “safer frequency” is a claim to be tested against opened sources and model results, not a premise.
 
-A planned in-repo comparison script is described in [`../../tools/README.md`](../../tools/README.md). That script is **planned only**; no code is in this pull request. Any later code must pass the full review set before it is pushed, and its pull request needs the owner’s approval.
+The in-repo comparison script is `tools/frequency_absorption` (see [`../../tools/README.md`](../../tools/README.md)). Tables and plots are in [`frequency-absorption.md`](frequency-absorption.md). It uses the opened Gabriel 1996 parameters and does **not** bundle IT’IS. Its output is an estimate, not a medical or regulatory conclusion.
 
 Sim4Life (https://sim4life.swiss/) is a commercial platform, not a candidate. Open FDTD solvers below are the alternatives considered here.
 
@@ -22,7 +22,7 @@ Sim4Life (https://sim4life.swiss/) is a commercial platform, not a candidate. Op
 
 ## Not yet a named candidate
 
-- **Skin-depth and analytical absorption calculators.** Rather than rely on an unverified third-party web calculator, the planned in-repo script in [`../../tools/README.md`](../../tools/README.md) is meant to compute skin depth and a whole-body SAR *estimate* per band from published tissue parameters, once that code is written, reviewed, and approved.
+- **Skin-depth and analytical absorption calculators.** Rather than rely on an unverified third-party web calculator, the in-repo script `tools/frequency_absorption` computes skin depth and a simplified whole-body SAR *estimate* per opened product band from the opened Gabriel 1996 parameters. See [`frequency-absorption.md`](frequency-absorption.md).
 - **Propagation models for comparing bands** (range, antenna size, path loss). No specific open-source implementation was opened and license-checked for this outline. Official ITU or FCC propagation methods may be cited in the evidence PR when those documents are opened. A verified open implementation can be added to this table later.
 - **Sim4Life / SEMCAD X.** Commercial software (https://sim4life.swiss/). Not a candidate. Open alternatives in the table above.
 
