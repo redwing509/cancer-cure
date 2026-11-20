@@ -8,4 +8,4 @@ Each country note should also list research programs and organizations that stud
 
 | File | Country | Status |
 |---|---|---|
-| *none yet* | | Awaiting the first checked country note |
+| [01-china.md](01-china.md) | China | Citation-checked country note; opened as a PR, not merged |
