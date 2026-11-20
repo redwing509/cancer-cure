@@ -1,0 +1,31 @@
+# Open-source programs to test frequency-selection claims
+
+**Status:** Candidate list only, compiled 19 Nov 2026, America/Los_Angeles, from official pages opened for this note. **Installing any tool, downloading a new package, or accepting a license still needs a separate OK** from the repository owner. A row here is not permission to install or to run a simulation.
+
+**This is not medical advice.** Read the [disclaimer in the README](../../README.md).
+
+These programs are for testing physical and engineering claims in [`frequency-selection.md`](frequency-selection.md): how absorption, skin depth, and coupling change with frequency, and how that compares across bands actually used for products. They cannot, by themselves, prove *why* a company or regulator chose a band. A “safer frequency” is a claim to be tested against opened sources and model results, not a premise.
+
+A planned in-repo comparison script is described in [`../../tools/README.md`](../../tools/README.md). That script is **planned only**; no code is in this pull request. Any later code must pass the full review set before it is pushed, and its pull request needs the owner’s approval.
+
+Sim4Life (https://sim4life.swiss/) is a commercial platform, not a candidate. Open FDTD solvers below are the alternatives considered here.
+
+## Candidates opened for this list
+
+| Name | Developer (as stated on the opened page) | What it can test | License (as stated) | Official URL | Source opened | Status |
+|---|---|---|---|---|---|---|
+| openEMS | Thorsten Liebig / project maintained by thliebig (University of Duisburg-Essen laboratory for General and Theoretical Electrical Engineering, as stated in the documentation) | Full-wave FDTD of Maxwell’s equations: antennas, microwave structures, and (per the docs) medical-research geometries. Could, after an approved install, compare coupling or absorbed power in a defined tissue model at different product bands. | GNU GPL v3 or later (openEMS); CSXCAD is GNU LGPL v3 or later | https://www.openems.de/ ; docs https://docs.openems.de/en/stable/intro.html ; wiki https://wiki.openems.de/index.php/Main_Page.html | Official site, documentation introduction, and wiki “License & Reference” section, 19 Nov 2026 | candidate |
+| Meep (MEEP) | Massachusetts Institute of Technology (NanoComp / ab initio group, as stated in the license and repository pages) | Free FDTD electromagnetics, including absorbed power density. Could, after an approved install, compare absorption in simple tissue geometries across bands. | GNU GPL v2 or later (license page opened) | https://github.com/NanoComp/meep ; license https://meep.readthedocs.io/en/stable/License_and_Copyright/ ; docs https://meep.readthedocs.io/en/latest/ | GitHub repository and official license page, 19 Nov 2026 | candidate |
+| gprMax | gprMax project (official site and GitHub) | FDTD electromagnetic-wave propagation; official about page and repository describe GPR, antennas, radar, and bioelectromagnetics. Could, after an approved install, be used for tissue-scale or antenna-scale comparisons if a published model is reproduced. | GNU GPL v3 or later | https://www.gprmax.org ; https://github.com/gprMax/gprMax ; docs https://docs.gprmax.com/en/latest/faqs.html | Official about page, GitHub repository, and FAQ license statement, 19 Nov 2026 | candidate |
+| FCC Body Tissue Dielectric Parameters (Gabriel 4-Cole-Cole) | U.S. Federal Communications Commission; values computed from Camelia Gabriel, U.S. Air Force Report AFOSR-TR-96, as stated on the page | Official calculator of tissue permittivity (ε) and conductivity (σ) from 10–6,000 MHz. A source of published tissue parameters for skin-depth or absorption estimates. Not a full-wave solver. | License name not stated on the opened FCC page (U.S. government webpage; underlying report is AFOSR-TR-96). Terms of the report and webpage must be re-read before any reuse in code. | https://www.fcc.gov/general/body-tissue-dielectric-parameters | FCC page opened 19 Nov 2026 | candidate (dataset / calculator; not an install) |
+| IT’IS tissue-properties database | IT’IS Foundation (citation on the overview: Baumgartner et al., Version 5.0, 21 August 2025, DOI 10.13099/VIP21000-05-0) | Published EM (and other) tissue parameters, including frequency-dependent dielectric properties, intended for computational life-science simulations. A possible parameter source for band comparisons, **only if download terms allow**. | Overview page describes the database as provided “in a free, easily accessible, and dynamically evolving manner.” **No named OSI license was stated on the overview page opened.** Download terms must be opened and quoted before any use. Not listed here as open-source software. | https://itis.swiss/virtual-population/tissue-properties/overview ; DOI https://doi.org/10.13099/VIP21000-05-0 | IT’IS overview page opened 19 Nov 2026 | candidate (dataset; terms not yet confirmed) |
+
+## Not yet a named candidate
+
+- **Skin-depth and analytical absorption calculators.** Rather than rely on an unverified third-party web calculator, the planned in-repo script in [`../../tools/README.md`](../../tools/README.md) is meant to compute skin depth and a whole-body SAR *estimate* per band from published tissue parameters, once that code is written, reviewed, and approved.
+- **Propagation models for comparing bands** (range, antenna size, path loss). No specific open-source implementation was opened and license-checked for this outline. Official ITU or FCC propagation methods may be cited in the evidence PR when those documents are opened. A verified open implementation can be added to this table later.
+- **Sim4Life / SEMCAD X.** Commercial software (https://sim4life.swiss/). Not a candidate. Open alternatives in the table above.
+
+## Method
+
+Follow [`METHOD.md`](../../METHOD.md). Do not invent URLs or licenses. If a later check finds a different license or a moved official page, correct this table and do not install from memory. No Sci-Hub or Library Genesis. Results of any future approved run belong on a branch and a pull request; they are model output, not proof of a company’s motive.
