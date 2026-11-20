@@ -10,7 +10,7 @@ Cancers are not always caused by one thing, and they can be caused by different 
 
 - Dielectric parameters from the 4-Cole-Cole model and Table 1 of Gabriel, Lau and Gabriel, *Phys. Med. Biol.* 41 (1996) 2271–2293, opened as the publisher PDF (https://iopscience.iop.org/article/10.1088/0031-9155/41/11/003/pdf, DOI https://doi.org/10.1088/0031-9155/41/11/003). The FCC page https://www.fcc.gov/general/body-tissue-dielectric-parameters states that its public calculator uses the same model (AFOSR-TR-96) and is limited to 10–6000 MHz. Frequencies outside that window are labeled; they still use the opened PMB model, which the paper states covers 10 Hz–100 GHz.
 - Field skin depth δ = 1/α for a normally incident plane wave on a homogeneous half-space of that one tissue.
-- A **simplified whole-body SAR estimate**: the depth average of SAR(z) = σ |E(z)|² / ρ over a 0.30 m slab, with incident power density S0 = 1 W m⁻² (a normalization, not a limit) and ρ = 1000 kg m⁻³ (a conventional water-like density; Gabriel 1996 Table 1 does not report mass density). Surface SAR and the average over one skin depth are listed for context. The 0.30 m length is a body-scale illustration, not an anatomical model and not an FCC or ICNIRP averaging mass.
+- A **simplified whole-body SAR estimate**, meaning only the depth average of the half-space SAR over a 0.30 m slab: SAR(z) = σ |E(z)|² / ρ, averaged from z = 0 to 0.30 m, with incident power density S0 = 1 W m⁻² (a normalization, not a limit) and ρ = 1000 kg m⁻³ (a conventional water-like density; Gabriel 1996 Table 1 does not report mass density). This is **not** a published whole-body resonance formula, **not** an anatomical phantom, and **not** an FCC or ICNIRP averaging mass. A homogeneous half-space has no body size or orientation, so this column cannot test the 30–300 MHz whole-body-resonance lead in frequency-selection.md and must not be read as a “safer frequency” ranking. Surface SAR and the average over one skin depth are listed for context.
 - Representative frequencies are midpoints (or identified ISM centers) of bands **named in opened allocation records** (ISM, cellular, Broadband PCS, Wi-Fi / U-NII, 3.45 GHz and 3.7 GHz Service, Upper Microwave Flexible Use). Full citations are in [frequency-absorption-method.md](frequency-absorption-method.md) and in the CSV.
 - IT'IS parameters are **not** used. This script is MIT-licensed and is not a medical or regulatory conclusion.
 
@@ -35,8 +35,8 @@ An SVG copy of the same figure is in [frequency-absorption.svg](frequency-absorp
 | ISM | 13.56 MHz | 13.56 MHz (center; 13.553–13.567 MHz at ±0.05%) | 47 CFR § 18.301 (eCFR, opened 19 Nov 2026) |
 | ISM | 27.12 MHz | 27.12 MHz (center; 26.957–27.283 MHz at ±0.6%) | 47 CFR § 18.301 (eCFR, opened 19 Nov 2026) |
 | ISM | 40.68 MHz | 40.68 MHz (center; 40.66–40.70 MHz at ±0.05%) | 47 CFR § 18.301 (eCFR, opened 19 Nov 2026) |
-| Cellular | 836.5 MHz | 824–849 MHz (mobile transmit / uplink span of Blocks A and B) | 47 CFR § 22.905 (eCFR, opened 19 Nov 2026) |
-| Cellular | 881.5 MHz | 869–894 MHz (base transmit / downlink span of Blocks A and B) | 47 CFR § 22.905 (eCFR, opened 19 Nov 2026) |
+| Cellular | 836.5 MHz | 824–849 MHz (span of the ranges paired in Blocks A and B) | 47 CFR § 22.905 (eCFR, opened 19 Nov 2026) |
+| Cellular | 881.5 MHz | 869–894 MHz (span of the ranges paired in Blocks A and B) | 47 CFR § 22.905 (eCFR, opened 19 Nov 2026) |
 | ISM / Part 15 | 915 MHz | 915 MHz ISM center (±13 MHz); also 902–928 MHz in § 15.247 | 47 CFR § 18.301 (eCFR) and 47 CFR § 15.247 (LII, opened 19 Nov 2026; https://www.law.cornell.edu/cfr/text/47/15.247) |
 | Broadband PCS | 1.8775 GHz | 1870–1885 MHz (Block B, first of the paired ranges) | 47 CFR § 24.229 (LII, opened 19 Nov 2026) |
 | Broadband PCS | 1.9575 GHz | 1950–1965 MHz (Block B, paired range) | 47 CFR § 24.229 (LII, opened 19 Nov 2026) |
@@ -53,7 +53,7 @@ An SVG copy of the same figure is in [frequency-absorption.svg](frequency-absorp
 
 ## Muscle
 
-| Representative frequency | Service | Skin depth | Surface SAR estimate (W kg⁻¹) | SAR average over one skin depth (W kg⁻¹) | Simplified whole-body SAR estimate, 0.30 m slab (W kg⁻¹) | Absorbed power density (W m⁻²) | Frequency-range flag |
+| Representative frequency | Service | Skin depth | Surface SAR estimate (W kg⁻¹) | SAR average over one skin depth (W kg⁻¹) | Half-space 0.30 m depth-average SAR estimate (W kg⁻¹) | Absorbed power density (W m⁻²) | Frequency-range flag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 13.56 MHz | ISM | 18.7 cm | 1.064e-03 | 4.601e-04 | 3.188e-04 | 9.968e-02 | inside FCC calculator 10–6000 MHz window |
 | 27.12 MHz | ISM | 13.3 cm | 2.063e-03 | 8.918e-04 | 4.533e-04 | 1.375e-01 | inside FCC calculator 10–6000 MHz window |
@@ -80,7 +80,7 @@ Incident S0 = 1 W m⁻²; ρ = 1000 kg m⁻³ (conventional). Estimates scale li
 
 ## Skin (dry)
 
-| Representative frequency | Service | Skin depth | Surface SAR estimate (W kg⁻¹) | SAR average over one skin depth (W kg⁻¹) | Simplified whole-body SAR estimate, 0.30 m slab (W kg⁻¹) | Absorbed power density (W m⁻²) | Frequency-range flag |
+| Representative frequency | Service | Skin depth | Surface SAR estimate (W kg⁻¹) | SAR average over one skin depth (W kg⁻¹) | Half-space 0.30 m depth-average SAR estimate (W kg⁻¹) | Absorbed power density (W m⁻²) | Frequency-range flag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 13.56 MHz | ISM | 42 cm | 7.729e-04 | 3.342e-04 | 4.116e-04 | 1.625e-01 | inside FCC calculator 10–6000 MHz window |
 | 27.12 MHz | ISM | 23.9 cm | 1.630e-03 | 7.048e-04 | 5.966e-04 | 1.948e-01 | inside FCC calculator 10–6000 MHz window |
@@ -107,7 +107,7 @@ Incident S0 = 1 W m⁻²; ρ = 1000 kg m⁻³ (conventional). Estimates scale li
 
 ## Skin (wet)
 
-| Representative frequency | Service | Skin depth | Surface SAR estimate (W kg⁻¹) | SAR average over one skin depth (W kg⁻¹) | Simplified whole-body SAR estimate, 0.30 m slab (W kg⁻¹) | Absorbed power density (W m⁻²) | Frequency-range flag |
+| Representative frequency | Service | Skin depth | Surface SAR estimate (W kg⁻¹) | SAR average over one skin depth (W kg⁻¹) | Half-space 0.30 m depth-average SAR estimate (W kg⁻¹) | Absorbed power density (W m⁻²) | Frequency-range flag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 13.56 MHz | ISM | 26.1 cm | 1.002e-03 | 4.330e-04 | 3.924e-04 | 1.309e-01 | inside FCC calculator 10–6000 MHz window |
 | 27.12 MHz | ISM | 18 cm | 1.920e-03 | 8.301e-04 | 5.549e-04 | 1.726e-01 | inside FCC calculator 10–6000 MHz window |
@@ -134,7 +134,7 @@ Incident S0 = 1 W m⁻²; ρ = 1000 kg m⁻³ (conventional). Estimates scale li
 
 ## Fat (not infiltrated)
 
-| Representative frequency | Service | Skin depth | Surface SAR estimate (W kg⁻¹) | SAR average over one skin depth (W kg⁻¹) | Simplified whole-body SAR estimate, 0.30 m slab (W kg⁻¹) | Absorbed power density (W m⁻²) | Frequency-range flag |
+| Representative frequency | Service | Skin depth | Surface SAR estimate (W kg⁻¹) | SAR average over one skin depth (W kg⁻¹) | Half-space 0.30 m depth-average SAR estimate (W kg⁻¹) | Absorbed power density (W m⁻²) | Frequency-range flag |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 13.56 MHz | ISM | 90.7 cm | 8.580e-04 | 3.710e-04 | 6.277e-04 | 3.890e-01 | inside FCC calculator 10–6000 MHz window |
 | 27.12 MHz | ISM | 64.4 cm | 1.532e-03 | 6.624e-04 | 9.964e-04 | 4.930e-01 | inside FCC calculator 10–6000 MHz window |

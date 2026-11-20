@@ -20,7 +20,7 @@ from tools.frequency_absorption.constants import (
     RHO_CONVENTIONAL_KG_M3,
     SPEED_OF_LIGHT,
 )
-from tools.frequency_absorption.generate import CSV_COLUMNS, generate, rows_for_bands
+from tools.frequency_absorption.generate import CSV_COLUMNS, DEFAULT_OUT_DIR, generate, rows_for_bands
 
 def assert_rel_close(test, a, b, rel=1e-9, msg=None):
     scale = max(abs(a), abs(b), 1e-30)
@@ -51,13 +51,34 @@ class ConstantsTests(unittest.TestCase):
 
 
 class ColeColeTests(unittest.TestCase):
-    def test_muscle_table_row_copied(self):
-        m = TISSUES["muscle"]
-        self.assertEqual(m.eps_inf, 4.0)
-        self.assertEqual(m.delta_eps, (50.0, 7000.0, 1.2e6, 2.5e7))
-        self.assertEqual(m.sigma_ionic, 0.2000)
-        # τ1 = 7.23 ps from Table 1
-        self.assertAlmostEqual(m.tau_s[0], 7.23e-12, places=20)
+    def test_table_1_rows_copied_exactly(self):
+        # Values copied from the opened Gabriel et al. (1996) Table 1.
+        expected = {
+            "muscle": dict(eps_inf=4.0, delta_eps=(50.0, 7000.0, 1.2e6, 2.5e7),
+                           tau_s=(7.23e-12, 353.68e-9, 318.31e-6, 2.274e-3),
+                           alpha=(0.10, 0.10, 0.10, 0.00), sigma_ionic=0.2000),
+            "skin_dry": dict(eps_inf=4.0, delta_eps=(32.0, 1100.0, 0.0, 0.0),
+                             tau_s=(7.23e-12, 32.48e-9, 0.0, 0.0),
+                             alpha=(0.00, 0.20, 0.0, 0.0), sigma_ionic=0.0002),
+            "skin_wet": dict(eps_inf=4.0, delta_eps=(39.0, 280.0, 3.0e4, 3.0e4),
+                             tau_s=(7.96e-12, 79.58e-9, 1.59e-6, 1.592e-3),
+                             alpha=(0.10, 0.00, 0.16, 0.20), sigma_ionic=0.0004),
+            "fat_not_infiltrated": dict(eps_inf=2.5, delta_eps=(3.0, 15.0, 3.3e4, 1.0e7),
+                                        tau_s=(7.96e-12, 15.92e-9, 159.15e-6, 7.958e-3),
+                                        alpha=(0.20, 0.10, 0.05, 0.01), sigma_ionic=0.0100),
+            "fat_infiltrated": dict(eps_inf=2.5, delta_eps=(9.0, 35.0, 3.3e4, 1.0e7),
+                                    tau_s=(7.96e-12, 15.92e-9, 159.15e-6, 15.915e-3),
+                                    alpha=(0.20, 0.10, 0.05, 0.01), sigma_ionic=0.0350),
+        }
+        self.assertEqual(set(TISSUES), set(expected))
+        for key, exp in expected.items():
+            tissue = TISSUES[key]
+            self.assertEqual(tissue.eps_inf, exp["eps_inf"], key)
+            self.assertEqual(tissue.delta_eps, exp["delta_eps"], key)
+            self.assertEqual(tissue.alpha, exp["alpha"], key)
+            self.assertEqual(tissue.sigma_ionic, exp["sigma_ionic"], key)
+            for i, (got, want) in enumerate(zip(tissue.tau_s, exp["tau_s"], strict=True)):
+                self.assertAlmostEqual(got, want, places=18, msg=f"{key} tau[{i}]")
 
     def test_dry_skin_has_only_two_dispersions(self):
         s = TISSUES["skin_dry"]
@@ -147,6 +168,24 @@ class PlaneWaveTests(unittest.TestCase):
             self.assertGreater(est.sar_avg_0p30m_w_kg, 0.0)
             self.assertLessEqual(est.sar_avg_0p30m_w_kg, est.surface_sar_estimate_w_kg + 1e-18)
 
+    def test_integrated_dissipation_matches_absorbed_power_density(self):
+        # For a homogeneous half-space, ∫_0^∞ σ |E_rms|^2 dz = (1-|Γ|^2) S0.
+        # With SAR(0) = σ |E_t|^2 / ρ and |E(z)|^2 = |E_t|^2 exp(-2αz),
+        # the integral is SAR(0) * ρ * δ / 2.
+        for key in TISSUES:
+            for f in (27.12e6, 915e6, 2450e6, 24.125e9):
+                est = plane_wave_estimates(TISSUES[key], f)
+                integrated = est.surface_sar_estimate_w_kg * RHO_CONVENTIONAL_KG_M3 * est.skin_depth_m / 2.0
+                assert_rel_close(
+                    self, integrated, est.absorbed_power_density_w_m2, rel=1e-6,
+                    msg=f"{key} {f}",
+                )
+
+    def test_zero_incident_power_gives_zero_sar(self):
+        est = plane_wave_estimates(TISSUES["muscle"], 915e6, s0=0.0)
+        self.assertEqual(est.surface_sar_estimate_w_kg, 0.0)
+        self.assertEqual(est.absorbed_power_density_w_m2, 0.0)
+
     def test_fcc_window_flag(self):
         inside = plane_wave_estimates(TISSUES["muscle"], 915e6)
         self.assertFalse(inside.outside_fcc_tool_range)
@@ -174,6 +213,15 @@ class BandsTests(unittest.TestCase):
         self.assertAlmostEqual(by_key["cellular_ul"].freq_hz, 836.5e6)
         self.assertAlmostEqual(by_key["cellular_dl"].freq_hz, 881.5e6)
         self.assertAlmostEqual(by_key["wifi_2400"].freq_hz, 2441.75e6)
+        self.assertIn("service_3450", by_key)
+        self.assertNotIn("cbrs_3450", by_key)
+
+    def test_range_notes_match_opened_windows(self):
+        by_key = {b.key: b for b in PRODUCT_BANDS}
+        self.assertIn("Inside the FCC", by_key["ism_13p56"].note)
+        self.assertNotIn("Below the FCC", by_key["ism_13p56"].note)
+        self.assertIn("Below the 30–300 MHz range", by_key["ism_27p12"].note)
+        self.assertNotIn("Lies inside the 30–300", by_key["ism_27p12"].note)
 
 
 class GenerateTests(unittest.TestCase):
@@ -184,6 +232,16 @@ class GenerateTests(unittest.TestCase):
             self.assertEqual(set(row), set(CSV_COLUMNS))
             self.assertIn("not applicable", row["cancer_type"])
             self.assertTrue(row["body_site"])
+
+    def test_committed_outputs_match_regeneration(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            paths = generate(Path(tmp))
+            for name in ("frequency-absorption.csv", "frequency-absorption.md",
+                         "frequency-absorption.svg"):
+                committed = (DEFAULT_OUT_DIR / name).read_bytes()
+                fresh = (Path(tmp) / name).read_bytes()
+                self.assertEqual(committed, fresh, name)
+            self.assertTrue((Path(tmp) / "frequency-absorption-method.md").exists())
 
     def test_reproducible_outputs(self):
         with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:

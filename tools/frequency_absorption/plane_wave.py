@@ -81,7 +81,7 @@ import math
 from dataclasses import dataclass
 
 from .cole_cole import TissueParameters, complex_relative_permittivity, effective_conductivity
-from .constants import EPSILON_0, MU_0, RHO_CONVENTIONAL_KG_M3, S0_W_M2, SPEED_OF_LIGHT
+from .constants import EPSILON_0, MU_0, RHO_CONVENTIONAL_KG_M3, S0_W_M2
 
 
 # Body-scale slab thickness used only for the "simplified whole-body"
@@ -108,10 +108,11 @@ def wavenumber(tissue: TissueParameters, freq_hz: float) -> complex:
     omega = 2.0 * math.pi * freq_hz
     eps = complex_relative_permittivity(tissue, freq_hz)
     k = omega * cmath.sqrt(MU_0 * EPSILON_0 * eps)
-    # cmath.sqrt uses the principal branch (Re ≥ 0). If Im(k) > 0, flip.
+    # Keep the decaying-in-+z branch, Im(k) ≤ 0. For a passive tissue
+    # (Im(ε̂) ≤ 0) the principal square root already has Re(k) ≥ 0 and
+    # Im(k) ≤ 0; the flip is only a guard. Do not flip again to restore
+    # Re(k), which would undo the decaying branch.
     if k.imag > 0:
-        k = -k
-    if k.real < 0:
         k = -k
     return k
 
@@ -209,7 +210,3 @@ def plane_wave_estimates(tissue: TissueParameters, freq_hz: float,
         outside_pmb_model_range=not (PMB_MODEL_FMIN_HZ <= freq_hz <= PMB_MODEL_FMAX_HZ),
     )
 
-
-# Silence unused import warning for SPEED_OF_LIGHT (kept as documentation
-# that μ0 is derived from ε0 and c). Re-export for tests.
-C_USED_IN_MU0 = SPEED_OF_LIGHT

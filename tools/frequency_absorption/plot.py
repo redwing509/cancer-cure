@@ -243,9 +243,25 @@ def write_png_from_svg_raster(
                 line(prev[0], prev[1], pt[0], pt[1], rgb, width=2)
             prev = pt
     # Very small built-in 5x7 font for title (ASCII)
-    _draw_text(pixels, w, h, title, x=w // 2, y=16, rgb=(0, 0, 0), scale=2, center=True)
-    _draw_text(pixels, w, h, "Field skin depth vs frequency (log-log). Dashed: product bands.",
-               x=w // 2, y=34, rgb=(40, 40, 40), scale=1, center=True)
+    _draw_text(pixels, w, h, title, x=w // 2, y=10, rgb=(0, 0, 0), scale=2, center=True)
+    # Wrap the supplied subtitle so the half-space / not-a-ranking caveats
+    # stay on the standalone PNG (the SVG already renders `subtitle`).
+    max_chars = 88
+    words = subtitle.split()
+    lines, cur = [], ""
+    for word in words:
+        trial = word if not cur else f"{cur} {word}"
+        if len(trial) > max_chars and cur:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = trial
+    if cur:
+        lines.append(cur)
+    y = 30
+    for line in lines[:3]:
+        _draw_text(pixels, w, h, line, x=w // 2, y=y, rgb=(40, 40, 40), scale=1, center=True)
+        y += 10
     _draw_text(pixels, w, h, "Frequency", x=w // 2, y=h - 22, rgb=(0, 0, 0), scale=1, center=True)
     # Legend
     ly = t + 8

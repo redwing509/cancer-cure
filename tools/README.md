@@ -13,7 +13,7 @@ This folder holds two related watchlists and one in-repo comparison tool.
 
 **Status:** Implemented in `frequency_absorption/` (this pull request). It is not merged to `main` until the repository owner approves.
 
-**Module:** `tools/frequency_absorption` (run `python3 -m tools.frequency_absorption` from the repository root; stdlib only).
+**Module:** `tools/frequency_absorption` (run `python3 -m tools.frequency_absorption` from the repository root; Python 3.10 or later, stdlib only).
 
 **Purpose:** compare, band by band, a transparent first-order estimate of how strongly RF energy couples into tissue, so claims that some product bands were chosen over “safer” frequencies can be tested against published tissue parameters. “Safer frequency” is treated as a **claim to test**, not as a result of the script. The script:
 

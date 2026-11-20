@@ -120,11 +120,18 @@ portable-device evaluations to the “SAR limits specified in § 1.1310” for
 The script therefore uses the standard definition above and labels every
 SAR column as an estimate.
 
-The **simplified whole-body SAR estimate** is the depth average of that
-half-space SAR over a 0.30 m slab (a body-scale length, **not** an
-anatomical model and **not** an FCC or ICNIRP averaging mass):
+The **simplified whole-body SAR estimate** in the table is only the depth
+average of that half-space SAR over a 0.30 m slab:
 
 > SAR<sub>avg</sub>(d) = SAR(0) (1 − exp(−2αd)) / (2αd), d = 0.30 m
+
+This 0.30 m length is a body-scale illustration chosen for this script,
+**not** a formula copied from an opened ICNIRP or FCC whole-body standard,
+**not** an anatomical phantom, and **not** an official averaging mass. A
+homogeneous half-space has no body size or orientation, so this estimate
+**cannot represent whole-body resonance** (the 30–300 MHz lead in
+[frequency-selection.md](frequency-selection.md)) and must not be read as
+a ranking of “safer” frequencies.
 
 The table also reports surface SAR, the average over one field skin depth,
 and the absorbed power density (1 − |Γ|²) S<sub>0</sub>, which does not
@@ -152,13 +159,17 @@ to be the only channel in the service. Official pages opened on 19 Nov 2026
 
 ISM centers used: 13.56, 27.12, 40.68, 915, 5800 MHz; 24.125 and 61.25 GHz.
 The same § 18.301 table lists 122.50 GHz and 245.00 GHz, which exceed the
-100 GHz PMB model range and are omitted. 13.56 MHz is below the FCC
-calculator window and is labeled accordingly.
+100 GHz PMB model range and are omitted. 13.56 MHz is inside the FCC
+calculator window (10–6000 MHz). Frequencies above 6000 MHz are labeled
+as outside that window and still inside the PMB model range. The opened
+paper describes the 4-Cole-Cole fit as a good fit rather than a unique
+solution; millimetre-wave rows (24–61 GHz) apply that same opened model
+and should not be read as new measurements.
 
 ## 5. How to run
 
-From the repository root, Python 3 stdlib only (no third-party package is
-required):
+From the repository root, Python 3.10 or later, stdlib only (no
+third-party package is required):
 
 ```
 python3 -m unittest discover -s tools/frequency_absorption/tests -t .

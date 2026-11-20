@@ -63,8 +63,8 @@ PRODUCT_BANDS: tuple[Band, ...] = (
         ),
         citation="47 CFR § 18.301 (eCFR, opened 19 Nov 2026)",
         note=(
-            "ISM center from the opened § 18.301 table. Below the FCC "
-            "dielectric-calculator window (10–6000 MHz); inside the PMB "
+            "ISM center from the opened § 18.301 table. Inside the FCC "
+            "dielectric-calculator window (10–6000 MHz) and the PMB "
             "1996 model range (10 Hz–100 GHz)."
         ),
     ),
@@ -79,9 +79,10 @@ PRODUCT_BANDS: tuple[Band, ...] = (
         ),
         citation="47 CFR § 18.301 (eCFR, opened 19 Nov 2026)",
         note=(
-            "ISM center from the opened § 18.301 table. Lies inside the "
+            "ISM center from the opened § 18.301 table. Below the "
             "30–300 MHz range discussed as a lead (not a finding) in "
-            "frequency-selection.md."
+            "frequency-selection.md; the opened upper edge of this "
+            "assignment is 27.283 MHz."
         ),
     ),
     Band(
@@ -100,30 +101,32 @@ PRODUCT_BANDS: tuple[Band, ...] = (
         key="cellular_ul",
         service="Cellular",
         freq_hz=_mhz(836.5),
-        opened_range="824–849 MHz (mobile transmit / uplink span of Blocks A and B)",
+        opened_range="824–849 MHz (span of the ranges paired in Blocks A and B)",
         source_url=(
             "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/"
             "part-22/subpart-H/section-22.905"
         ),
         citation="47 CFR § 22.905 (eCFR, opened 19 Nov 2026)",
         note=(
-            "Arithmetic midpoint of the opened 824–849 MHz span. Block A "
-            "pairs 869–880 with 824–835 and 890–891.5 with 845–846.5 MHz; "
-            "Block B pairs 880–890 with 835–845 and 891.5–894 with "
-            "846.5–849 MHz."
+            "Arithmetic midpoint of the opened 824–849 MHz span. The opened "
+            "§ 22.905 text lists Block A as 869–880 MHz paired with 824–835 "
+            "and 890–891.5 paired with 845–846.5 MHz, and Block B as "
+            "880–890 paired with 835–845 and 891.5–894 paired with "
+            "846.5–849 MHz. Direction (mobile vs base) is not restated "
+            "here because that wording was not copied from the opened page."
         ),
     ),
     Band(
         key="cellular_dl",
         service="Cellular",
         freq_hz=_mhz(881.5),
-        opened_range="869–894 MHz (base transmit / downlink span of Blocks A and B)",
+        opened_range="869–894 MHz (span of the ranges paired in Blocks A and B)",
         source_url=(
             "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/"
             "part-22/subpart-H/section-22.905"
         ),
         citation="47 CFR § 22.905 (eCFR, opened 19 Nov 2026)",
-        note="Arithmetic midpoint of the opened 869–894 MHz span. See cellular_ul.",
+        note="Arithmetic midpoint of the opened 869–894 MHz span. See cellular_ul for the opened pairings. Direction is not restated here because that wording was not copied from the opened page.",
     ),
     Band(
         key="ism_915",
@@ -145,7 +148,7 @@ PRODUCT_BANDS: tuple[Band, ...] = (
         ),
     ),
     Band(
-        key="pcs_ul_block_b",
+        key="pcs_block_b_1870",
         service="Broadband PCS",
         freq_hz=_mhz(1877.5),
         opened_range="1870–1885 MHz (Block B, first of the paired ranges)",
@@ -160,13 +163,13 @@ PRODUCT_BANDS: tuple[Band, ...] = (
         ),
     ),
     Band(
-        key="pcs_dl_block_b",
+        key="pcs_block_b_1950",
         service="Broadband PCS",
         freq_hz=_mhz(1957.5),
         opened_range="1950–1965 MHz (Block B, paired range)",
         source_url="https://www.law.cornell.edu/cfr/text/47/24.229",
         citation="47 CFR § 24.229 (LII, opened 19 Nov 2026)",
-        note="Arithmetic midpoint of opened Block B 1950–1965 MHz. See pcs_ul_block_b.",
+        note="Arithmetic midpoint of opened Block B 1950–1965 MHz. See pcs_block_b_1870.",
     ),
     Band(
         key="wifi_2400",
@@ -181,7 +184,7 @@ PRODUCT_BANDS: tuple[Band, ...] = (
         ),
     ),
     Band(
-        key="cbrs_3450",
+        key="service_3450",
         service="3.45 GHz Service",
         freq_hz=_mhz(3500.0),
         opened_range="3450–3550 MHz",
@@ -200,9 +203,11 @@ PRODUCT_BANDS: tuple[Band, ...] = (
         source_url="https://www.law.cornell.edu/cfr/text/47/27.5",
         citation="47 CFR § 27.5(m) (LII, opened 19 Nov 2026)",
         note=(
-            "Arithmetic midpoint of the opened 3700–4140 MHz range. § 27.5(m) "
-            "names Block A (3700–3800 MHz), B (3800–3900), C (3900–4000), "
-            "D (4000–4100), and E (4100–4140)."
+            "Arithmetic midpoint of the opened 3700–4140 MHz range. The opened "
+            "LII text of § 27.5(m) states: '3700-4140 MHz band. The 3.7 GHz "
+            "Service is comprised of Block A (3700-3800 MHz); Block B "
+            "(3800-3900 MHz); Block C (3900-4000 MHz); Block D (4000-4100 MHz); "
+            "and Block E (4100-4140 MHz).'"
         ),
     ),
     Band(

@@ -29,7 +29,7 @@ DEFAULT_OUT_DIR = REPO_ROOT / "causes" / "radio-frequency"
 # at the FCC tool floor so the left axis is the public-calculator window).
 SWEEP_FMIN_HZ = 10e6
 SWEEP_FMAX_HZ = 100e9
-SWEEP_POINTS = 241  # 40 steps per decade over 6 decades
+SWEEP_POINTS = 241  # 60 points per decade over 4 decades (10 MHz to 100 GHz), plus the endpoints
 
 # Tissues drawn on the plot and in the compact Markdown table.
 PLOT_TISSUES = ("muscle", "skin_dry", "skin_wet", "fat_not_infiltrated")
@@ -94,7 +94,7 @@ def rows_for_bands():
                     "cancer_type": "not applicable (dosimetry estimate, not an epidemiology finding)",
                     "body_site": tissue.body_site_note,
                     "eps_real": f"{est.eps_real:.6g}",
-                    "eps_imag": f"{est.eps_imag_neg:.6g}",
+                    "eps_double_prime": f"{est.eps_imag_neg:.6g}",
                     "sigma_eff_S_per_m": f"{est.sigma_eff:.6g}",
                     "skin_depth_m": f"{est.skin_depth_m:.6e}",
                     "skin_depth_display": _fmt_len(est.skin_depth_m),
@@ -126,7 +126,7 @@ CSV_COLUMNS = [
     "cancer_type",
     "body_site",
     "eps_real",
-    "eps_imag",
+    "eps_double_prime",
     "sigma_eff_S_per_m",
     "skin_depth_m",
     "skin_depth_display",
@@ -212,15 +212,19 @@ def write_markdown(path: Path, rows) -> None:
         "homogeneous half-space of that one tissue."
     )
     parts.append(
-        f"- A **simplified whole-body SAR estimate**: the depth average of "
-        f"SAR(z) = σ |E(z)|² / ρ over a {WHOLE_BODY_SLAB_M:.2f} m slab, with "
-        f"incident power density S0 = {S0_W_M2:g} W m⁻² (a normalization, "
+        f"- A **simplified whole-body SAR estimate**, meaning only the depth "
+        f"average of the half-space SAR over a {WHOLE_BODY_SLAB_M:.2f} m slab: "
+        f"SAR(z) = σ |E(z)|² / ρ, averaged from z = 0 to {WHOLE_BODY_SLAB_M:.2f} m, "
+        f"with incident power density S0 = {S0_W_M2:g} W m⁻² (a normalization, "
         f"not a limit) and ρ = {int(RHO_CONVENTIONAL_KG_M3)} kg m⁻³ "
         f"(a conventional water-like density; Gabriel 1996 Table 1 does not "
-        f"report mass density). Surface SAR and the average over one skin "
-        f"depth are listed for context. The 0.30 m length is a body-scale "
-        f"illustration, not an anatomical model and not an FCC or ICNIRP "
-        f"averaging mass."
+        f"report mass density). This is **not** a published whole-body "
+        f"resonance formula, **not** an anatomical phantom, and **not** an "
+        f"FCC or ICNIRP averaging mass. A homogeneous half-space has no body "
+        f"size or orientation, so this column cannot test the 30–300 MHz "
+        f"whole-body-resonance lead in frequency-selection.md and must not be "
+        f"read as a “safer frequency” ranking. Surface SAR and the average "
+        f"over one skin depth are listed for context."
     )
     parts.append(
         "- Representative frequencies are midpoints (or identified ISM "
@@ -277,7 +281,7 @@ def write_markdown(path: Path, rows) -> None:
         "Skin depth",
         "Surface SAR estimate (W kg⁻¹)",
         "SAR average over one skin depth (W kg⁻¹)",
-        "Simplified whole-body SAR estimate, 0.30 m slab (W kg⁻¹)",
+        "Half-space 0.30 m depth-average SAR estimate (W kg⁻¹)",
         "Absorbed power density (W m⁻²)",
         "Frequency-range flag",
     ]
@@ -394,9 +398,14 @@ def generate(out_dir: Path | None = None) -> dict[str, Path]:
     write_csv(csv_path, rows)
     write_markdown(md_path, rows)
     write_plots(out_dir)
+    method_src = DEFAULT_OUT_DIR / "frequency-absorption-method.md"
+    method_dst = out_dir / "frequency-absorption-method.md"
+    if method_src.exists() and method_dst.resolve() != method_src.resolve():
+        method_dst.write_bytes(method_src.read_bytes())
     return {
         "csv": csv_path,
         "md": md_path,
         "svg": out_dir / "frequency-absorption.svg",
         "png": out_dir / "frequency-absorption.png",
+        "method": method_dst if method_dst.exists() else method_src,
     }
