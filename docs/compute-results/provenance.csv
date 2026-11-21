@@ -1,0 +1,29 @@
+item,value,unit,source
+mail_elapsed_s_sum,772800.3,s,Sum of elapsed_s in the 165 mail result JSON files copied read-only at 2026-11-21 9:10:27 AM PST
+vps3_elapsed_s_sum,375588.2,s,Sum of elapsed_s in the 792 vps3 result JSON files copied at the same time
+box_elapsed_s_sum,2234.3,s,Sum of elapsed_s in the 1112 box result JSON files copied at the same time
+mail_elapsed_h_sum,214.66675,h,772800.3 / 3600
+vps3_elapsed_h_sum,104.33005555555556,h,375588.2 / 3600
+box_elapsed_h_sum,0.620638888888889,h,2234.3 / 3600
+mail_original_grid_specs,106,jobs,"len(list(grid(""mail""))) in ccq.refill at write time, including cell-cap skips"
+mail_original_grid_skipped_too_big,10,jobs,"grid(""mail"") jobs with scatter_cost cells > max_cells (1.2e7)"
+mail_original_grid_runnable,96,jobs,106 minus 10; all 96 were present in the copied mail result JSON
+vps3_original_grid_skipped_too_big,64,jobs,"grid(""vps3"") jobs with scatter_cost cells > max_cells (6e6)"
+mail_cell_cap,12000000,cells,ccq.refill.grid / JOBS.md: 1.2e7 after symmetry
+vps3_cell_cap,6000000,cells,ccq.refill.grid / JOBS.md: 6e6 after symmetry
+box_mc_jobs_analyzed,1085,jobs,Count of kind=mc_uncertainty in the 1112 copied box JSON files
+box_mc_seed_min,100000,seed,Minimum spec.seed in those 1085 box MC JSON files
+box_mc_seed_max,101132,seed,Maximum spec.seed in those 1085 box MC JSON files
+box_mc_unique_seeds,1085,seeds,Number of distinct spec.seed values in those files
+box_mc_samples_per_freq,150,samples,spec.samples in those box MC JSON files (all 1085 were 150)
+box_mc_planned_seeds,2000,seeds,"ccq.refill.grid(""box""): range(2000) with seed+100000"
+rig1_mc_jobs_analyzed,2995,jobs,Count of kind=mc_uncertainty in the 3022 rig1 result JSON files summarized read-only at 2026-11-21 9:20:09 AM PST
+rig1_mc_seed_min,0,seed,Minimum spec.seed in those 2995 rig1 MC JSON files
+rig1_mc_seed_max,2994,seed,Maximum spec.seed in those 2995 rig1 MC JSON files
+rig1_mc_unique_seeds,2995,seeds,Number of distinct spec.seed values in those files
+rig1_mc_seeds_in_block_2800_2999,195,seeds,Count of those unique seeds with seed//200*200 == 2800 (195 of 200)
+rig1_mc_samples_per_freq,1000,samples,spec.samples in those rig1 MC JSON files; also the rig1 value in refill.py / JOBS.md
+rig1_mc_planned_original_seeds,1000,seeds,"ccq.refill.grid(""rig1"") / JOBS.md original plan: range(1000). Later top-up batches extended the seed range"
+jobs_md_early_slab_err_range,0.0001 to 0.005,fraction of incident power,"Queue JOBS.md wording, 20 Nov 2026 early check; not the full 744-job range in this snapshot"
+jobs_md_early_mie_rel_err_range,0.4 to 1.8,percent,"Queue JOBS.md wording, 20 Nov 2026 early check; not the full 74-job range in this snapshot"
+rig1_running_batch_json_at_summary,35,files,JSON files already present in the 50-cancer-cc284 out directory at 2026-11-21 9:20:09 AM PST; status.txt had reported points=29/40 at 9:19:00 AM PST
