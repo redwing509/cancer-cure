@@ -24,6 +24,7 @@ Traditional use is not the same thing as clinical evidence. A laboratory result 
 - [`tools/CANDIDATES.md`](tools/CANDIDATES.md) and [`tools/README.md`](tools/README.md) — survey tool candidates, and the plan for an in-repo frequency-versus-absorption script (MIT-licensed; plan only until a reviewed code PR)
 - [`causes/radio-frequency/TOOLS.md`](causes/radio-frequency/TOOLS.md) — open-source programs that could test frequency-selection claims (candidates only; installs need a separate OK)
 - [`investigations/cancer-fungus-hypothesis.md`](investigations/cancer-fungus-hypothesis.md) — outline and method for testing the “cancer is a fungus” claim (full evidence review is a later pull request)
+- [`docs/compute-results/2026-11-21.md`](docs/compute-results/2026-11-21.md) — **MODEL-ONLY / not validated** snapshot of tissue-phantom RF absorption jobs (Meep and analytic). These are physics estimates for simple phantoms, not a specific cancer and not medical advice. A citation check is required before any number is used in a claim or cause file
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — how to suggest a correction or a new source
 
 ## What belongs here

@@ -8,6 +8,10 @@
 
 The lead question for this branch is **why widely used products were placed at or near frequencies sometimes said to affect the human body most**. See [`frequency-selection.md`](frequency-selection.md) for the outline, and [`TOOLS.md`](TOOLS.md) for open-source programs that could test the physical part of those claims (candidates only; installs need a separate OK): whole-body resonance and SAR peaks, the 1947 ITU ISM allocations, FCC auction and licensing history, stated engineering reasons, industry filings, IEEE C95.1 and ICNIRP committee process, and the water-absorption claim about 2.45 GHz. That file is outline and method only.
 
+## Model-only compute snapshot
+
+A **MODEL-ONLY / not validated** snapshot of finished tissue-phantom jobs (planar stacks, spheres, and body-size muscle spheroids; not a specific cancer, not a head model, not medical advice) is in [`docs/compute-results/2026-11-21.md`](../../docs/compute-results/2026-11-21.md). Those numbers are physics estimates for simple phantoms. They do not answer the causation question below, and a citation check is required before any of them is used in an evidence note.
+
 ## Cancer-causation question
 
 Do **radio-frequency electromagnetic fields (RF-EMF)**, including from wireless communications and from high-power occupational or radar sources, cause cancer in humans, and if so at what exposures and at which sites?
