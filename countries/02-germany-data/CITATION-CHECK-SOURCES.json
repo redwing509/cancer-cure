@@ -1,0 +1,32 @@
+{
+  "checked": "2026-11-24 12:31 PM PST",
+  "summary": "S01 KID page opened HTTP 200. Hermes first clause used 'verlängert'; the page says 'verlängern'. The two S01 sentences exist separately (one under the lead, one under 'Verlängert eine Misteltherapie das Leben?') and are not one quote. S02 UKD PDF opened HTTP 200 (after 301); recorded Kann/Überlebenszeit wording is on the slide (line breaks only). S03 live AWMF register URL was an Anubis bot-check in this environment, not the guideline text. Hermes verify S03 was TRUE on a register fetch we could not reproduce here. The official Leitlinienprogramm Onkologie Langversion 2.0 PDF (HTTP 200) was opened instead. The PDF aim sentence is close to the Hermes register quote but not verbatim ('S3-Leitlinie' and 'ist es', not 'wird es sein' / 'weiteren'). S04 hub table HTTP 200; table cells match, but Hermes joined the heading and cells with pipes.",
+  "rows": [
+    {
+      "url": "https://www.krebsinformationsdienst.de/mistel",
+      "http_status": 200,
+      "quote_check": "NEAR_QUOTE_PLUS_SEPARATE_SENTENCES",
+      "note": "Title 'Misteltherapie bei Krebs', updated 13.11.2026, Dr. Anke Ernst (Pharmazeutin), DKFZ Krebsinformationsdienst. Lead wording: 'Ob eine Misteltherapie das Leben verlängert, ist durch Studien nicht abschließend geklärt.' Under the heading 'Verlängert eine Misteltherapie das Leben?': 'Ob Mistelpräparate das Leben von Menschen mit Krebs verlängern, ist nicht geklärt.' Hermes recorded 'verlängert' in that second sentence; the page has 'verlängern'. Verbatim later in that section: 'Die Leitlinie spricht deshalb weder eine Empfehlung für noch gegen eine Misteltherapie mit dem Ziel aus, das Leben zu verlängern.' QoL: 'Eine Misteltherapie kann bei Menschen mit soliden Tumoren zur Verbesserung der Lebensqualität erwogen werden. So lautet die Empfehlung der S3-Leitlinie Komplementärmedizin. Sie bezieht sich auf die Anwendung von Mistelgesamtextrakt als Spritze unter die Haut.'"
+    },
+    {
+      "url": "https://uniklinik-duesseldorf.de/fileadmin/Fuer-Patienten-und-Besucher/Kliniken-Zentren-Institute/Zentren/Universitaetstumorzentrum/Fuer_Patienten/DPAO/Download/2024-05-13_Misteltherapie.pdf",
+      "http_status": 200,
+      "quote_check": "VERBATIM_WITH_LINEBREAKS",
+      "note": "Official UKD/CIO patient-education PDF. After typographic quotes and line-break joins, the recorded S3 'Kann'-Empfehlung / Level of Evidence 1a, 2021 / no-recommendation-for-survival sentences are on the Leitlinienempfehlungen slide. This is a hospital slide citing the guideline, not the guideline itself."
+    },
+    {
+      "url": "https://register.awmf.org/de/leitlinien/detail/032-055OL",
+      "http_status": 200,
+      "opened_via": "https://www.leitlinienprogramm-onkologie.de/fileadmin/user_upload/Downloads/Leitlinien/Komplementär/Version_2/LL_Komplementärmedizin_Langversion_2.0.pdf",
+      "opened_via_encoded": "https://www.leitlinienprogramm-onkologie.de/fileadmin/user_upload/Downloads/Leitlinien/Komplement%C3%A4r/Version_2/LL_Komplement%C3%A4rmedizin_Langversion_2.0.pdf",
+      "quote_check": "REGISTER_BLOCKED_OFFICIAL_PDF_OPENED",
+      "note": "Live register page is an Anubis 'Making sure you're not a bot!' challenge, not the guideline text, so the Hermes register quote was not checked on that live page. Official Langversion 2.0 PDF (Mai 2024, AWMF 032-055OL), HTTP 200, 12,273,929 bytes, was opened. PDF aim sentence: 'Ziel der S3-Leitlinie Komplementäre Onkologie ist es, Ärzten und weiterem in der Behandlung von Tumorpatienten einbezogenem Fachpersonal sowie den Patienten selbst evidenzbasierte und formal konsentierte Empfehlungen (und Negativ-Empfehlungen) für anstehende Entscheidungen zu geben.' Statement 7.69 (2020, LoE 1a): 'Es kann keine Empfehlung für oder gegen eine Verordnung von Mistelgesamtextrakt (Viscum album L.) enthaltenden Präparaten mit dem Ziel der Verlängerung der Überlebenszeit gegeben werden.' Recommendation 7.70 (Empfehlungsgrad 0, LoE 1a): 'Die subkutane Gabe von Mistelgesamtextrakt (Viscum album L.) kann für den therapeutischen Einsatz zur Verbesserung der Lebensqualität bei Patienten mit soliden Tumoren erwogen werden.'"
+    },
+    {
+      "url": "https://hub.leitlinienprogramm-onkologie.de/leitlinie/komplementaermedizin/besonderheiten-1",
+      "http_status": 200,
+      "quote_check": "TABLE_CELLS_VERBATIM",
+      "note": "Heading is 'Tabelle 30: Mistel'. Cells: Endpunkt Lebensqualität; Empfehlungsstärke Kann; Patienten 'Patienten mit soliden Tumoren'; Kontext 'Intervention: subkutanen Gabe von Mistelgesamtextrakt (Viscum album L.)'. Hermes joined heading and cells with pipes and an em dash. Use the table cells, or prefer the official PDF recommendation 7.70 wording."
+    }
+  ]
+}

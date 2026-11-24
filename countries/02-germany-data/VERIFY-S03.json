@@ -1,0 +1,11 @@
+{
+  "url_opened": "https://register.awmf.org/de/leitlinien/detail/032-055OL",
+  "doi": "",
+  "title": "S3-Leitlinie Komplementärmedizin in der Behandlung von onkologischen PatientInnen",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "Ziel der S3 Leitlinie Komplementäre Onkologie wird es sein, Ärzten und weiteren in der Behandlung von Tumorpatienten einbezogenem Fachpersonal sowie den Patienten selbst evidenzbasierte und formal konsentierte Empfehlungen (und Negativ-Empfehlungen) für anstehende Entscheidungen zu geben.",
+  "how_verified": "Opened the URL with web_extract, then read the saved full page text with read_file and compared the recorded quote word for word against page lines 168-172",
+  "how_opened": "full text",
+  "limitations": "Verified only on the AWMF register HTML page, not inside the linked PDF guideline documents (Langfassung/Kurzfassung); no DOI is listed on the register page; the page text is line-wrapped while the recorded quote is single-line, but all words and punctuation match verbatim"
+}

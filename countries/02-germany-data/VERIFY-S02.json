@@ -1,0 +1,11 @@
+{
+  "url_opened": "https://uniklinik-duesseldorf.de/fileadmin/Fuer-Patienten-und-Besucher/Kliniken-Zentren-Institute/Zentren/Universitaetstumorzentrum/Fuer_Patienten/DPAO/Download/2024-05-13_Misteltherapie.pdf",
+  "doi": "",
+  "title": "Misteltherapie - Das sollten Sie wissen",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "S3-Leitlinie \"Komplementärmedizin in der Behandlung onkologischer PatientInnen\" der Deutschen Krebsgesellschaft in Kooperation mit über 20 medizinischen Fachgesellschaften und Berufsverbänden: „Kann“-Empfehlung zum Einsatz mit dem Ziel der Verbesserung der Lebensqualität (Level of Evidence 1a, 2021). „Es kann keine Empfehlung für oder gegen eine Verordnung von Mistelgesamtextrakt (Viscum album L.) enthaltenden Präparaten mit dem Ziel der Verlängerung der Überlebenszeit gegeben werden.“",
+  "how_verified": "web_extract of the PDF URL; compared the recorded quote character-by-character against the extracted full text",
+  "how_opened": "full text",
+  "limitations": "Title field in the PDF metadata was empty; title taken from the first slide heading (Thema: Misteltherapie - Das sollten Sie wissen). No DOI exists for this slide deck (empty by schema). Text extraction of a slide deck may lose formatting, but the quote text is verbatim in extracted order."
+}

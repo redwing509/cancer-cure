@@ -1,0 +1,35 @@
+{
+  "entries": [
+    {
+      "claim_or_test": "Cancer-cure 02 Germany — mistletoe / Viscum album research (first bite-size slice)",
+      "url": "https://uniklinik-duesseldorf.de/fileadmin/Fuer-Patienten-und-Besucher/Kliniken-Zentren-Institute/Zentren/Universitaetstumorzentrum/Fuer_Patienten/DPAO/Download/2024-05-13_Misteltherapie.pdf",
+      "title": "Misteltherapie – Das sollten Sie wissen",
+      "what_was_measured": "Lebensqualität unter Mistelgesamtextrakt (Viscum album L.); 2020 Metaanalyse, 26 kontrollierte prospektive Studien, Einfluss der Misteltherapie auf die Lebensqualität von Tumorpatientinnen und Tumorpatienten; Überlebenszeit bei Krebs, divergente Studienlage",
+      "population_or_system": "Tumorpatientinnen und Tumorpatienten (Beispiele im Deckblatt: Mammakarzinom Frühstadium, Pankreaskarzinom, Lungenkarzinom Stadium IV)",
+      "measured_result_quote": "Verbesserung der Lebensqualität: d = 0,61 (95% KI 0,41-0,81, p < 0,00001). „Kann“-Empfehlung zum Einsatz mit dem Ziel der Verbesserung der Lebensqualität (Level of Evidence 1a, 2021). „Es kann keine Empfehlung für oder gegen eine Verordnung von Mistelgesamtextrakt (Viscum album L.) enthaltenden Präparaten mit dem Ziel der Verlängerung der Überlebenszeit gegeben werden.",
+      "how_opened": "full text",
+      "negatives_or_limits": "Keine Empfehlung für oder gegen Verlängerung der Überlebenszeit; Überleben bei Krebs: divergente Studienlage; Take Home: „Prognoseverbesserung der Krebserkrankung: wenig Daten“."
+    },
+    {
+      "claim_or_test": "Cancer-cure 02 Germany — mistletoe / Viscum album research (first bite-size slice)",
+      "url": "https://register.awmf.org/de/leitlinien/detail/032-055OL",
+      "title": "S3-Leitlinie Komplementärmedizin in der Behandlung von onkologischen PatientInnen",
+      "what_was_measured": "UNKNOWN — geöffnete Register-Seite nennt das Ziel der Leitlinie, keine Mistel-Messung",
+      "population_or_system": "Alle Patienten mit onkologischen Erkrankungen; Adressaten: Ärzte, medizinisches Assistenzpersonal, Patienten und Angehörige",
+      "measured_result_quote": "Ziel der S3 Leitlinie Komplementäre Onkologie wird es sein, Ärzten und weiteren in der Behandlung von Tumorpatienten einbezogenem Fachpersonal sowie den Patienten selbst evidenzbasierte und formal konsentierte Empfehlungen (und Negativ-Empfehlungen) für anstehende Entscheidungen zu geben.",
+      "how_opened": "full text",
+      "negatives_or_limits": "Keine mistzelspezifische Empfehlung auf der geöffneten Register-Seite; keine DOI; Langfassung/Kurzfassung der Leitlinie nicht geöffnet."
+    },
+    {
+      "claim_or_test": "Cancer-cure 02 Germany — mistletoe / Viscum album research (first bite-size slice)",
+      "url": "https://hub.leitlinienprogramm-onkologie.de/leitlinie/komplementaermedizin/besonderheiten-1",
+      "title": "11. Anhang – Komplementärmedizin",
+      "what_was_measured": "Lebensqualität (Endpunkt, Tabelle 30: Mistel)",
+      "population_or_system": "Patienten mit soliden Tumoren",
+      "measured_result_quote": "Tabelle 30: Mistel — Lebensqualität | Kann | Patienten mit soliden Tumoren | Intervention: subkutanen Gabe von Mistelgesamtextrakt (Viscum album L.)",
+      "how_opened": "full text",
+      "negatives_or_limits": "Empfehlungsstärke „Kann“ (keine stärkere Empfehlung); kein Überlebens-Nutzen behauptet; Empfehlungsübersicht, keine Studienergebnisse."
+    }
+  ],
+  "notes": "Nur Einträge mit verdict TRUE aus VERIFIED.json verwendet (3 Quellen); SOURCES.json-Quelle krebsinformationsdienst.de/mistel liegt nicht in VERIFIED.json und wurde nicht verwendet; keine neuen Quellen hinzugefügt; alle Seiten in diesem Schritt als Full Text geöffnet und Zitate wortgleich gegen den Extrakt geprüft."
+}

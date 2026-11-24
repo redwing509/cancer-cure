@@ -1,0 +1,11 @@
+{
+  "url_opened": "https://www.krebsinformationsdienst.de/mistel",
+  "doi": "",
+  "title": "Misteltherapie bei Krebs | DKFZ - Krebsinformationsdienst",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "FALSE",
+  "quote": "Page actually states (bullet list): \"Ob eine Misteltherapie das Leben verl\u00e4ngert, ist durch Studien nicht abschließend gekl\u00e4rt.\" The recorded quote \"Ob Mistelpr\u00e4parate das Leben von Menschen mit Krebs verl\u00e4ngert, ist nicht gekl\u00e4rt. … Die Leitlinie spricht deshalb weder eine Empfehlung f\u00fcr noch gegen eine Misteltherapie mit dem Ziel aus, das Leben zu verl\u00e4ngern.\" does not appear verbatim in either rendering of the page. A second rendering of the same URL (title \"Mistelpr\u00e4parate zur Krebstherapie | DKFZ - Krebsinformationsdienst\", heading \"Misteltherapie gegen Krebs\") contains related but different wording: \"Trotz langj\u00e4hriger Forschung steht nicht fest, dass die verf\u00fcgbaren Pr\u00e4parate das Tumorwachstum stoppen oder vor R\u00fcckf\u00e4llen sch\u00fctzen.\" and \"Deshalb findet sich auch in keiner der derzeit g\u00fcltigen Leitlinien zur Krebstherapie die Empfehlung, Mistelpr\u00e4parate anzuwenden.\"",
+  "how_verified": "Opened the URL with web_extract twice (both fetches returned full text) and compared the recorded quote against the page text; checked both renderings returned.",
+  "how_opened": "full text",
+  "limitations": "Two fetches returned different page renderings (one updated 13.11.2026 by Dr. Anke Ernst; one older/alternate rendering); no DOI is printed on the page. The recorded quote's second sentence (about the Leitlinie giving neither a recommendation for nor against mistletoe therapy to prolong life) was not found verbatim in either rendering, so the claim fails regardless of rendering; no part of the page beyond the extracted text was checked separately."
+}
