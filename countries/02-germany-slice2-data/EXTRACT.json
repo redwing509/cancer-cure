@@ -1,0 +1,10 @@
+STATUS: DONE
+Job: t1358u Germany (02) cancer-cure country, slice 2 — find new German official sources.
+What I did: Searched in German (five queries). Opened four sources actually read this turn:
+(1) Tröger et al. 2014, Dtsch Arztebl Int via PMC4150026 — randomized phase III trial, mistletoe QoL in locally advanced/metastatic pancreatic cancer (pancreas), full text.
+(2) Publisso/GMS HTA Kurzfassung (DIMDI/BfArM-commissioned) — systematic review of mistletoe in Mammakarzinom/breast, QoL small-to-moderate, no overall-survival evidence, full text.
+(3) Helmholtz Munich news page — CPA open-source computational oncology model (github.com/facebookresearch/CPA), German group, full text.
+(4) helmholtz.de Krebsforschung program page — official program incl. Krebsrisikofaktoren und Prävention, led by DKFZ, full text.
+None of the five first-slice sources was reused. No NOT FOUND items. Mistletoe not presented as a cure; null findings reported.
+Files produced: /workspace/research-rotation/t1358u/germany-02-slice2/runs/SOURCES.json (4 sources, JSON only, <400 words excluding quotes).
+Next steps: none — slice complete; hand SOURCES.json to the note author.

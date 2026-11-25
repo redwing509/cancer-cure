@@ -9,3 +9,4 @@ Each country note should also list research programs and organizations that stud
 | File | Country | Status |
 |---|---|---|
 | [01-china.md](01-china.md) | China | Citation-checked country note; opened as a PR, not merged |
+| [02-germany.md](02-germany.md) | Germany | First bite-size slice (mistletoe / Viscum album only), citation-checked 24 Nov 2026; opened as a PR, not merged |

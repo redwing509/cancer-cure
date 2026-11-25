@@ -1,0 +1,46 @@
+{
+  "queries": [
+    {"lang": "de", "query": "Misteltherapie Krebs Deutschland Leitlinie Viscum album"},
+    {"lang": "de", "query": "Viscum album Krebsforschung Deutschland Universität klinische Studie"},
+    {"lang": "de", "query": "Misteltherapie onkologische Leitlinie Deutschland Ärztekammer"}
+  ],
+  "sources": [
+    {
+      "url": "https://www.krebsinformationsdienst.de/mistel",
+      "title": "Misteltherapie bei Krebs",
+      "why_relevant": "Official German Cancer Information Service (DKFZ) patient page on mistletoe preparations in cancer therapy; cautious assessment: survival benefit not clarified, quality-of-life „Kann“-recommendation for solid tumors.",
+      "how_opened": "full text",
+      "quote": "Ob Mistelpräparate das Leben von Menschen mit Krebs verlängert, ist nicht geklärt. … Die Leitlinie spricht deshalb weder eine Empfehlung für noch gegen eine Misteltherapie mit dem Ziel aus, das Leben zu verlängern.",
+      "quote_en": "[EN] 'It is not clarified whether mistletoe preparations prolong the lives of people with cancer. … The guideline therefore issues neither a recommendation for nor against mistletoe therapy with the aim of prolonging life.'",
+      "cancer_type_or_site": "solide Tumoren der Organe (solid tumors; no blood cancers), as the source states"
+    },
+    {
+      "url": "https://uniklinik-duesseldorf.de/fileadmin/Fuer-Patienten-und-Besucher/Kliniken-Zentren-Institute/Zentren/Universitaetstumorzentrum/Fuer_Patienten/DPAO/Download/2024-05-13_Misteltherapie.pdf",
+      "title": "Misteltherapie – Das sollten Sie wissen",
+      "why_relevant": "University Hospital Düsseldorf patient-education presentation (University Women's Clinic, CIO Düsseldorf) citing the S3 guideline on Viscum album in oncology, including the caution on survival claims.",
+      "how_opened": "full text",
+      "quote": "„Kann“-Empfehlung zum Einsatz mit dem Ziel der Verbesserung der Lebensqualität (Level of Evidence 1a, 2021). „Es kann keine Empfehlung für oder gegen eine Verordnung von Mistelgesamtextrakt (Viscum album L.) enthaltenden Präparaten mit dem Ziel der Verlängerung der Überlebenszeit gegeben werden.“",
+      "quote_en": "[EN] '„May“ recommendation for use with the aim of improving quality of life (Level of Evidence 1a, 2021). „No recommendation can be given for or against the prescription of preparations containing mistletoe extract (Viscum album L.) with the aim of prolonging survival time.“'",
+      "cancer_type_or_site": "solide Tumoren (solid tumors) per S3 guideline quote; Mammakarzinom cited as example"
+    },
+    {
+      "url": "https://register.awmf.org/de/leitlinien/detail/032-055OL",
+      "title": "S3-Leitlinie Komplementärmedizin in der Behandlung von onkologischen PatientInnen",
+      "why_relevant": "AWMF guideline register entry for the official S3 guideline on complementary medicine in oncology (Version 2.0, 31.05.2024, valid to 31.05.2029, under revision), which contains the mistletoe/Viscum album chapter.",
+      "how_opened": "full text",
+      "quote": "Ziel der S3 Leitlinie Komplementäre Onkologie wird es sein, Ärzten und weiteren in der Behandlung von Tumorpatienten einbezogenem Fachpersonal sowie den Patienten selbst evidenzbasierte und formal konsentierte Empfehlungen (und Negativ-Empfehlungen) für anstehende Entscheidungen zu geben.",
+      "quote_en": "[EN] The aim of the S3 guideline for complementary oncology is to give physicians and other professionals involved in treating tumor patients, as well as patients themselves, evidence-based and formally consented recommendations (and negative recommendations) for decisions to be made.",
+      "cancer_type_or_site": "onkologische PatientInnen (oncology patients, all tumor types)"
+    },
+    {
+      "url": "https://hub.leitlinienprogramm-onkologie.de/leitlinie/komplementaermedizin/besonderheiten-1",
+      "title": "11. Anhang – Komplementärmedizin",
+      "why_relevant": "Leitlinienprogramm Onkologie (DKG/Deutsche Krebshilfe/AWMF) hub appendix, Table 30: mistletoe — quality of life, „Kann“, solid tumors, subcutaneous Viscum album extract.",
+      "how_opened": "full text",
+      "quote": "Tabelle 30: Mistel — Lebensqualität | Kann | Patienten mit soliden Tumoren | Intervention: subkutanen Gabe von Mistelgesamtextrakt (Viscum album L.)",
+      "quote_en": "[EN] Table 30: Mistletoe — Quality of life | May | Patients with solid tumors | Intervention: subcutaneous administration of mistletoe extract (Viscum album L.)",
+      "cancer_type_or_site": "solide Tumoren (solid tumors)"
+    }
+  ],
+  "notes": "Searched in German first; all four sources were opened in full text this turn (official patient information, university hospital material, AWMF guideline register, Leitlinienprogramm Onkologie hub). Industry-affiliated mistel-therapie.de and Medscape surfaced in search but were not opened or used. No peer-reviewed clinical trial was opened; the set includes one null/cautious official finding: no recommendation for or against mistletoe to prolong survival."
+}

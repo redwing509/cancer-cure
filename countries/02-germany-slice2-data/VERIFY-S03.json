@@ -1,0 +1,11 @@
+{
+  "url_opened": "https://www.helmholtz-munich.de/newsroom/news/artikel/computational-prediction-of-single-cell-perturbations",
+  "doi": "",
+  "title": "Rechnergestützte Vorhersage von Störungen in Einzelzellen",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "Die Suche nach wirksamen Kombinationen von Arzneimitteln zur Behandlung von Krebs ist heute eines der größten Herausforderungen in der pharmazeutischen Forschung. ... CPA steht als Open-Source-Software zur Verfügung.",
+  "how_verified": "web_extract of the URL; compared recorded quote fragments against page text",
+  "how_opened": "full text",
+  "limitations": "None; both quote fragments verified verbatim on the opened page (the '...' marks an omitted middle segment present on the page)."
+}

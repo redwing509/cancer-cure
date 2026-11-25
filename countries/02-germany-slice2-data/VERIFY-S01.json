@@ -1,0 +1,11 @@
+{
+  "url_opened": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4150026/",
+  "doi": "",
+  "title": "Quality of life of patients with advanced pancreatic cancer during treatment with mistletoe: a randomized controlled trial",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "FALSE",
+  "quote": "those treated with mistletoe did better on all 6 functional scales and on 7 of 9 symptom scales, including pain (95% confidence interval [ci] -29 to -17), fatigue (95% ci -36.1 to -25.0), appetite loss (95% ci -51 to -36.7), and insomnia (95% ci -45.8 to -28.6).",
+  "how_verified": "Opened the URL with web_extract and compared the recorded quote character-by-character against the page text.",
+  "how_opened": "full text",
+  "limitations": "DOI not visible in the extracted page content (not extracted); comparison limited to the extracted Results-section text. Recorded quote differs: page uses lowercase \"those\" at sentence start, lowercase \"[ci]\"/\"ci\" where the record uses \"[CI]\"/\"CI\", and hyphens \"-\" where the record uses en dashes \"–\" (e.g., \"-29 to -17\" vs \"-29 to –17\")."
+}

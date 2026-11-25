@@ -1,0 +1,11 @@
+{
+  "url_opened": "https://hub.leitlinienprogramm-onkologie.de/leitlinie/komplementaermedizin/besonderheiten-1",
+  "doi": "",
+  "title": "11. Anhang – Komplementärmedizin",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "Tabelle 30: Mistel — Lebensqualität | Kann | Patienten mit soliden Tumoren | Intervention: subkutanen Gabe von Mistelgesamtextrakt (Viscum album L.)",
+  "how_verified": "web_extract opened the URL; I compared the recorded quote against the page content (section 11.2.1, Table 30: Mistel). The page prints heading '### Tabelle 30: Mistel' and table row 'Lebensqualität | Kann | Patienten mit soliden Tumoren | Intervention: subkutanen Gabe von Mistelgesamtextrakt (Viscum album L.)'; every textual element of the recorded quote matches verbatim.",
+  "how_opened": "full text",
+  "limitations": "The page renders the quote as a markdown table (separate heading line plus table row); the recorded quote flattens it into one line with ' — ' between heading and row, so the exact single-line string is not verbatim on the page, but no quoted word or value was altered or missing. No DOI exists on this guideline page."
+}

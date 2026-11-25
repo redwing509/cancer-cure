@@ -1,0 +1,11 @@
+{
+  "url_opened": "https://helmholtz.de/forschung/forschungsbereiche/gesundheit/krebsforschung",
+  "doi": "",
+  "title": "Krebsforschung - Helmholtz Home",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "Das Helmholtz-Programm „Krebsforschung“ vereint Schwerpunkte in der Zell- und Tumorbiologie, Funktioneller und Struktureller Genomforschung, Krebsrisikofaktoren und Prävention, Immunologie und Krebs, Infektion, Entzündung und Krebs sowie Bildgebung und Radioonkologie, zu dem das HZDR einen entscheidenden Beitrag leistet.",
+  "how_verified": "web_extract tool; first fetch failed with RemoteDisconnected, retry succeeded",
+  "how_opened": "full text",
+  "limitations": "none; the recorded quote matches verbatim as a prefix of the sentence on the page (the page adds ', zu dem das HZDR einen entscheidenden Beitrag leistet.')"
+}
