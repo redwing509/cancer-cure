@@ -1,0 +1,11 @@
+{
+  "url_opened": "https://journals.publisso.de/de/journals/gms/volume20/000312",
+  "doi": "10.3205/000312",
+  "title": "Therapie mit Mistelextrakten bei Patientinnen mit Mammakarzinom als Ergänzung zur konventionellen Krebstherapie im Vergleich zur konventionellen Krebstherapie allein – medizinische Wirksamkeit und Sicherheit, Kosten und Kosteneffektivität, Patienten- und soziale Aspekte, ethische Bewertung",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "Verbesserungen der gesundheitsbezogenen Lebensqualität gegenüber der Kontrollgruppe waren gering bis moderat. ... Studien zum Effekt der MT auf das Gesamtüberleben fehlen.",
+  "how_verified": "Opened the URL with web_extract (German page, full text saved to spillover file); confirmed sentence 1 verbatim in the inline extraction, then ran an exact-phrase search for sentence 2 in the saved full text — both sentences appear verbatim on the opened page (in the Zusammenfassung/abstract). DOI read from the page's Citation Note.",
+  "how_opened": "full text",
+  "limitations": "Extraction was head+tail windowed, so the text between the two sentences was not read as one continuous stretch; verbatim presence of each sentence was confirmed via exact-string match in the saved full text. Verified on the German-language page; the English version exists but was not needed."
+}

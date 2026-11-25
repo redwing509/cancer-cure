@@ -2,7 +2,7 @@
 
 **This is not medical advice.** Nothing in this note is a recommendation to start, stop, or replace cancer treatment. No entry is a “cure.” Talk to an oncologist before changing care. Read the [repository disclaimer](../README.md) and [`METHOD.md`](../METHOD.md).
 
-Status: **first bite-size slice only**, not a complete Germany country note. The earlier full-survey Hermes job `20261122-094412-cancer-cure-survey-02-germany-natural-an` failed (OVH path unresponsive / yearly quota). This rerun used bite-size jobs on NVIDIA NIM Nemotron 3.5 Super VL (James t1358u), then a controller citation check that opened the cited files. Prompt language: German first, then English to confirm. Report in English; original quotes kept with a labeled English translation. Checked 24 Nov 2026, Pacific Time. No email.
+Status: **first and second bite-size slices only** (second slice at the end of this file), not a complete Germany country note. The earlier full-survey Hermes job `20261122-094412-cancer-cure-survey-02-germany-natural-an` failed (OVH path unresponsive / yearly quota). This rerun used bite-size jobs on NVIDIA NIM Nemotron 3.5 Super VL (James t1358u), then a controller citation check that opened the cited files. Prompt language: German first, then English to confirm. Report in English; original quotes kept with a labeled English translation. Checked 24 Nov 2026, Pacific Time. No email.
 
 **Per-case rule.** The opened sources in this slice speak of mistletoe extract in “Patienten mit soliden Tumoren” (patients with solid tumors) or “Krebspatienten verschiedener Entitäten” (cancer patients of various entities). Those wordings are kept. They are not a finding for one named cancer type or one body site, and they are not a finding for blood cancers. A result in one type or site is not a result in another. See [`METHOD.md`](../METHOD.md).
 
@@ -93,3 +93,62 @@ NOT FOUND in this slice: a measured survival or quality-of-life result copied fr
 ## Hermes status
 
 Bite-size jobs ran on the box under the t1358u we-research profile (NVIDIA NIM `nvidia/nemotron-3.5-super-vl-120b-a12b`). The sources job finished at 12:19 PM PST on 24 Nov 2026, rc 0; verifies ran from 12:19 to 12:28 PM PST; extract finished at 12:33 PM PST, rc 0. Hermes extract used only the three verdict-TRUE sources and omitted the KID page; this note still uses the controller-checked KID wording. A quality-of-life effect size that appeared in the Hermes extract from the Düsseldorf slides was not added here, because this note quotes only wording checked on the opened files for a first slice. The controller opened the official KID page, the UKD PDF, the Leitlinienprogramm hub table, and the official S3 Langversion 2.0 PDF, and checked each quote before this note was written. Supporting job files are in `02-germany-data/`.
+
+---
+
+# Second bite-size slice (checked 25 Nov 2026, Pacific Time)
+
+**This is not medical advice.** No entry below is a cure. Mistletoe is not presented as a cure. Per-case rule applies: each finding is tied to the cancer type and body site named in the opened source; a pancreatic result is not a breast result and neither is a result for other cancers.
+
+Languages searched: German first (five German queries by Hermes); the sources opened include two German-language official pages, one German-language journal abstract (HTA summary), and one English-language full-text trial report (open PMC copy; the German-language journal version was not opened). Hermes jobs: box t1358u we-research profile, NVIDIA NIM `nvidia/nemotron-3.5-super-vl-120b-a12b`, sources 1:56 PM PST 24 Nov 2026, verifies to 9:48 PM PST, extract finished 10:14 PM PST 24 Nov 2026. The controller reopened all four URLs on 25 Nov 2026 and quotes below are copied from those opened pages. Job files: [`02-germany-slice2-data/`](02-germany-slice2-data/).
+
+## Headline findings (slice 2 only)
+
+| Topic | Cancer type | Body site | What the opened source measured | Evidence level |
+|---|---|---|---|---|
+| Mistletoe extract vs best supportive care, quality of life | locally advanced or metastatic pancreatic cancer | pancreas | Mistletoe group did better on all 6 functional and 7 of 9 symptom QLQ-C30 scales (96 mistletoe vs 72 control patients with QoL data) | RCT (open, single-center, phase III; not blinded) |
+| Mistletoe therapy added to conventional therapy in breast cancer (HTA) | Mammakarzinom / breast cancer in women | breast | QoL improvement small to moderate, possibly due to bias; no effect on 5-year progression-free survival in one small study; no overall-survival studies | Systematic review (HTA report summary) |
+
+### Tröger et al. — randomized trial, advanced pancreatic cancer
+
+- **Compound or therapy:** mistletoe extract, escalating subcutaneous doses three times a week, vs best supportive care alone
+- **Cancer type:** locally advanced or metastatic pancreatic cancer (as named in the opened paper)
+- **Body site:** pancreas
+- **Country:** sponsor address in Freiburg, Germany (Clinical Research Dr. Tröger); trial conducted at the Clinical Centers of Serbia, Belgrade. This is a German-led trial, not a trial run in Germany.
+- **Study type:** “An open, single-center, group-sequential, randomized phase III trial (ISRCTN70760582)”
+- **Population:** 220 patients enrolled January 2009 to December 2010; QoL data “from 96 patients treated with mistletoe and 72 control patients.”
+- **Measured result (quoted, English original):** “Those treated with mistletoe did better on all 6 functional scales and on 7 of 9 symptom scales, including pain (95% confidence interval [CI] -29 to –17), fatigue (95% CI –36.1 to –25.0), appetite loss (95% CI -51 to -36.7), and insomnia (95% CI –45.8 to –28.6).”
+- **Limitations stated in the paper (quoted):** “The trial was intentionally not blinded … the patients' subjective reporting of their quality of life should be interpreted with a degree of caution, as it may be subject to distorting effects of various types”. The trial was stopped early after the interim survival analysis; the survival result is in a separate paper (reference 11 of the opened paper) that was not opened here, so no survival number is reported in this note.
+- **Link:** https://pmc.ncbi.nlm.nih.gov/articles/PMC4150026/
+- **Evidence level:** RCT
+- **Negative / null results:** none reported for QoL in the opened abstract; 2 of 9 symptom scales were not among those improved (the abstract says “7 of 9”).
+- **Source opened as:** full text (PMC open copy).
+- **Check note:** Hermes verify-S01 marked this quote FALSE because its extractor lowercased the text; the controller's opened copy matches the recorded quote, including capital “CI.”
+
+### Schnell-Inderst et al. — HTA systematic review, breast cancer (GMS / DIMDI)
+
+- **Compound or therapy:** Misteltherapie (MT) added to conventional cancer therapy
+- **Cancer type:** Mammakarzinom (breast cancer) in women
+- **Body site:** breast
+- **Country:** German HTA programme (DIMDI, Cologne; HTA report no. 145, DOI 10.3205/hta000141L); authors at UMIT Tirol (Austria) and Medizinische Hochschule Hannover (Germany)
+- **Study type:** systematic reviews underlying an HTA report (literature 2004 to October 2020); article DOI 10.3205/000312, published 14 Jul 2022
+- **Measured result (quoted):** „Verbesserungen der gesundheitsbezogenen Lebensqualität gegenüber der Kontrollgruppe waren gering bis moderat. Aufgrund des hohen Verzerrungsrisikos in den Studien ist es möglich, dass der Unterschied nicht durch die MT bedingt ist.“ (English translation: “Improvements in health-related quality of life compared with the control group were small to moderate. Because of the high risk of bias in the studies, it is possible that the difference is not caused by mistletoe therapy.”)
+- **Negative / null results (quoted):** „Eine Studie mit kleiner Fallzahl zeigte nach 5 Jahren keinen Effekt auf das progressionsfreie Überleben. Studien zum Effekt der MT auf das Gesamtüberleben fehlen.“ (English translation: “One study with a small sample size showed no effect on progression-free survival after 5 years. Studies on the effect of mistletoe therapy on overall survival are lacking.”)
+- **Link:** https://journals.publisso.de/de/journals/gms/volume20/000312
+- **Evidence level:** Systematic review
+- **Source opened as:** full text (German page).
+
+## Programs studying cancer causes (slice 2)
+
+- **Helmholtz-Programm „Krebsforschung“** (led by DKFZ with HZDR). Quoted: „Das Helmholtz-Programm „Krebsforschung“ vereint Schwerpunkte in der Zell- und Tumorbiologie, Funktioneller und Struktureller Genomforschung, Krebsrisikofaktoren und Prävention, Immunologie und Krebs, Infektion, Entzündung und Krebs sowie Bildgebung und Radioonkologie, zu dem das HZDR einen entscheidenden Beitrag leistet.“ (English translation: “The Helmholtz programme ‘Cancer Research’ brings together focus areas in cell and tumour biology, functional and structural genomics, cancer risk factors and prevention, immunology and cancer, infection, inflammation and cancer, and imaging and radiation oncology, to which the HZDR makes a decisive contribution.”) Cancer type / body site: not specific (program page). Link: https://helmholtz.de/forschung/forschungsbereiche/gesundheit/krebsforschung — Source opened as: full text.
+
+## Open-source software (slice 2)
+
+- **CPA (Compositional Perturbation Autoencoder)**, Helmholtz Munich with Meta AI. Quoted: „Die Suche nach wirksamen Kombinationen von Arzneimitteln zur Behandlung von Krebs ist heute eines der größten Herausforderungen in der pharmazeutischen Forschung.“ … „CPA steht als Open-Source-Software zur Verfügung“ (English translation: “The search for effective combinations of drugs to treat cancer is today one of the greatest challenges in pharmaceutical research.” … “CPA is available as open-source software”). Code link given on the page: https://github.com/facebookresearch/CPA ; paper DOI on the page: https://doi.org/10.15252/msb.202211517 . This predicts single-cell transcriptome responses to drug perturbations; it is **not** a tumor-growth simulator and no cancer type or body site is named on the opened page. Not added to `tools/CANDIDATES.md` in this slice. Link: https://www.helmholtz-munich.de/newsroom/news/artikel/computational-prediction-of-single-cell-perturbations — Source opened as: full text.
+
+## Not verified / not done (slice 2)
+
+- The pancreatic trial's overall-survival paper (Eur J Cancer 2013, reference 11 of the opened paper) was not opened; no survival figure is given here.
+- The German-language version of the pancreatic trial report was not opened, so its quote is the English original only.
+- The full HTA report (DIMDI no. 145) was not opened; only the GMS summary article.
+- NOT FOUND in slice 2: a named open-source tumor-growth simulator from a German group; a complete list of German cancer-cause programs.

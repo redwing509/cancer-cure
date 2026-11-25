@@ -1,0 +1,52 @@
+{
+  "queries": [
+    {"lang": "de", "query": "Viscum album Misteltherapie klinische Studie Überleben Lebensqualität Krebs randomisiert"},
+    {"lang": "de", "query": "Misteltherapie klinische Studie Brustkrebs Überleben Deutschland"},
+    {"lang": "de", "query": "Open-Source Tumormodellierung Krebs deutsche Forschungsgruppe Software"},
+    {"lang": "de", "query": "Krebsrisikofaktoren Krebsursachenforschung Programm Deutschland offizielle Seite"},
+    {"lang": "de", "query": "Tröger Mistel Pankreaskarzinom randomisierte kontrollierte Studie Lebensqualität Deutsches Ärzteblatt"}
+  ],
+  "sources": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4150026/",
+      "title": "Quality of Life of Patients With Advanced Pancreatic Cancer During Treatment With Mistletoe: A randomized controlled trial",
+      "why_relevant": "Primary randomized phase III trial reporting measured quality-of-life results for mistletoe (Viscum album) in advanced pancreatic cancer.",
+      "how_opened": "full text",
+      "quote": "Those treated with mistletoe did better on all 6 functional scales and on 7 of 9 symptom scales, including pain (95% confidence interval [CI] -29 to –17), fatigue (95% CI –36.1 to –25.0), appetite loss (95% CI -51 to -36.7), and insomnia (95% CI –45.8 to –28.6).",
+      "quote_en": "",
+      "cancer_type": "pancreatic cancer / pancreatic carcinoma (locally advanced or metastatic)",
+      "body_site": "pancreas (page names 'pancreatic cancer/Pankreaskarzinom')"
+    },
+    {
+      "url": "https://journals.publisso.de/de/journals/gms/volume20/000312",
+      "title": "Therapie mit Mistelextrakten bei Patientinnen mit Mammakarzinom als Ergänzung zur konventionellen Krebstherapie im Vergleich zur konventionellen Krebstherapie allein – medizinische Wirksamkeit und Sicherheit, Kosten und Kosteneffektivität, Patienten- und soziale Aspekte, ethische Bewertung",
+      "why_relevant": "German HTA systematic review (Kurzfassung of the DIMDI/BfArM-commissioned HTA report) reporting measured quality-of-life and survival outcomes of mistletoe in breast cancer.",
+      "how_opened": "full text",
+      "quote": "Verbesserungen der gesundheitsbezogenen Lebensqualität gegenüber der Kontrollgruppe waren gering bis moderat. ... Studien zum Effekt der MT auf das Gesamtüberleben fehlen.",
+      "quote_en": "Improvements in health-related quality of life compared with the control group were small to moderate. ... Studies on the effect of mistletoe therapy on overall survival are lacking.",
+      "cancer_type": "Mammakarzinom / breast carcinoma (page: 'Mammakarzinom', 'Brustkrebs')",
+      "body_site": "Brust / breast (page names 'Brustkrebs')"
+    },
+    {
+      "url": "https://www.helmholtz-munich.de/newsroom/news/artikel/computational-prediction-of-single-cell-perturbations",
+      "title": "Rechnergestützte Vorhersage von Störungen in Einzelzellen",
+      "why_relevant": "Official Helmholtz Munich page presenting CPA, an open-source computational oncology model for predicting drug combinations in cells, developed by a German group (Helmholtz Munich/TUM).",
+      "how_opened": "full text",
+      "quote": "Die Suche nach wirksamen Kombinationen von Arzneimitteln zur Behandlung von Krebs ist heute eines der größten Herausforderungen in der pharmazeutischen Forschung. ... CPA steht als Open-Source-Software zur Verfügung.",
+      "quote_en": "The search for effective drug combinations for cancer treatment is one of the greatest challenges in pharmaceutical research. ... CPA is available as open-source software.",
+      "cancer_type": "UNKNOWN",
+      "body_site": "UNKNOWN"
+    },
+    {
+      "url": "https://helmholtz.de/forschung/forschungsbereiche/gesundheit/krebsforschung",
+      "title": "Krebsforschung",
+      "why_relevant": "Official German Helmholtz Association program page on cancer research, including cancer risk factors and prevention (research into cancer causes), led by DKFZ.",
+      "how_opened": "full text",
+      "quote": "Das Helmholtz-Programm „Krebsforschung“ vereint Schwerpunkte in der Zell- und Tumorbiologie, Funktioneller und Struktureller Genomforschung, Krebsrisikofaktoren und Prävention, Immunologie und Krebs, Infektion, Entzündung und Krebs sowie Bildgebung und Radioonkologie.",
+      "quote_en": "The Helmholtz program 'Cancer Research' unites priorities in cell and tumor biology, functional and structural genomics, cancer risk factors and prevention, immunology and cancer, infection, inflammation and cancer, and imaging and radiation oncology.",
+      "cancer_type": "UNKNOWN",
+      "body_site": "UNKNOWN"
+    }
+  ],
+  "notes": "All four sources were actually opened in this session (full text). German-language search was used first; no English-only lookup was needed. None of the five first-slice sources was reused. No NOT FOUND items: sources were found for all three in-scope topics (two mistletoe/Viscum album evidence sources, one open-source oncology modeling tool from a German group, one official German program on cancer causes/risk-factor research). Mistletoe is not presented as a cure; null findings (no overall-survival evidence in the HTA review) are reported."
+}
