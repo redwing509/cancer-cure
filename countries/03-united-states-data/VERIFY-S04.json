@@ -1,0 +1,12 @@
+{
+  "url_opened": "https://cancercontrol.cancer.gov/",
+  "doi": "",
+  "title": "Home | Division of Cancer Control and Population Sciences (DCCPS)",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "FALSE",
+  "quote": "UNKNOWN",
+  "quote_en": "",
+  "how_verified": "web_extract retrieved the full homepage text; I compared the recorded quote character-for-character against the extracted page text",
+  "how_opened": "full text",
+  "limitations": "Only the homepage was checked; the quote could exist on a linked subpage that was not opened. Similar but non-verbatim phrasing appears on the homepage: 'has the lead responsibility at NCI for supporting research in cancer surveillance, epidemiology, health services, behavioral science, and cancer survivorship' and 'to ensure that knowledge is translated into practice rapidly, effectively, and efficiently'. Neither matches the recorded quote verbatim."
+}

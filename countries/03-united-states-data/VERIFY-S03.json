@@ -1,0 +1,12 @@
+{
+  "url_opened": "https://clinicaltrials.gov/study/NCT01294072",
+  "doi": "",
+  "title": "Study Investigating the Ability of Plant Exosomes to Deliver Curcumin to Normal and Colon Cancer Tissue",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "This clinical trial will investigate the ability of plant exosomes to more effectively deliver curcumin to normal colon tissue and colon tumors. Curcumin is the yellow pigment of turmeric, a natural product with diverse biological activities.",
+  "quote_en": "",
+  "how_verified": "web_extract on the ClinicalTrials.gov API v2 JSON endpoint for NCT01294072 (same-host fallback after the HTML study page returned 403 Forbidden); compared the record's briefSummary field to the recorded quote character for character — exact match; title field also matches the earlier-pass title",
+  "how_opened": "full text (full protocol record retrieved via https://clinicaltrials.gov/api/v2/studies/NCT01294072?format=json; the HTML page https://clinicaltrials.gov/study/NCT01294072 itself returned 403 Forbidden and could not be rendered)",
+  "limitations": "Could not confirm the rendered HTML study page displays the quote because clinicaltrials.gov/study/NCT01294072 returned 403 Forbidden via web_extract; verification relied on the API v2 JSON endpoint on the same host, which returned the complete record. No DOI exists for this trial record (empty)."
+}

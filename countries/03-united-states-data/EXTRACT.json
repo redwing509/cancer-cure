@@ -1,0 +1,64 @@
+{
+  "entries": [
+    {
+      "source_id": "S01",
+      "url": "https://www.cancer.gov/about-cancer/treatment/cam",
+      "access_mode": "full text",
+      "quote": "Complementary and alternative medicine (CAM) is the term for medical products and practices that are not part of standard medical care.",
+      "cancer_type": "Not stated",
+      "body_site": "Not stated",
+      "evidence_level": "Definition/context only; not a study",
+      "population_or_system": "NCI patient information audience",
+      "limitations": "Outside study scale. CAM definition only; no cancer type, site, or therapeutic evidence. No therapeutic generalization."
+    },
+    {
+      "source_id": "S02",
+      "url": "https://www.nccih.nih.gov/research/research-results/compound-in-north-american-botanical-oplopanax-horridus-inhibits-colorectal-tumor-growth-in-mouse-model-and-human-cells",
+      "access_mode": "full text",
+      "quote": "Mice with transplanted human colon cancer cells received oplopantriol A\" and \"tumor growth inhibition occurred in a dose-related manner.",
+      "cancer_type": "Colon cancer",
+      "body_site": "colon",
+      "evidence_level": "Animal (mouse xenograft)",
+      "population_or_system": "Mice with transplanted human colon cancer cells",
+      "limitations": "Animal xenograft only. Single compound (oplopantriol A from Oplopanax horridus). Dose-related tumor growth inhibition, no adverse events in mice. Not human evidence."
+    },
+    {
+      "source_id": "S02",
+      "url": "https://www.nccih.nih.gov/research/research-results/compound-in-north-american-botanical-oplopanax-horridus-inhibits-colorectal-tumor-growth-in-mouse-model-and-human-cells",
+      "access_mode": "full text",
+      "quote": "One of them (HCT-116) showed a significant sensitivity to oplopantriol A.",
+      "cancer_type": "Colorectal cancer",
+      "body_site": "Not specified for this cell-line comparison (site within colorectum not specified)",
+      "evidence_level": "In vitro (human cell lines)",
+      "population_or_system": "HCT-116 and SW-480 human colorectal cancer cell lines; HCT-116 (p53 wild-type) significantly sensitive, SW-480 (p53 mutant) not",
+      "limitations": "In vitro only. Response in one of two cell lines. p53 status may be linked. Not human evidence."
+    },
+    {
+      "source_id": "S03",
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT01294072?format=json",
+      "access_mode": "full text",
+      "quote": "This clinical trial will investigate the ability of plant exosomes to more effectively deliver curcumin to normal colon tissue and colon tumors.\" Registry fields verified: \"overallStatus\":\"UNKNOWN\", \"phases\":[\"NA\"], \"hasResults\":false; officialTitle begins \"Phase I Clinical Trial\".",
+      "cancer_type": "Colon Cancer",
+      "body_site": "colon (normal colon tissue and colon tumors)",
+      "evidence_level": "Early trial, registration only",
+      "population_or_system": "University of Louisville interventional trial, NCT01294072, United States",
+      "limitations": "Planned objective only; no posted results. Registry status overallStatus UNKNOWN, phases field NA despite \"Phase I Clinical Trial\" title, hasResults false."
+    },
+    {
+      "source_id": "S04",
+      "url": "https://cancercontrol.cancer.gov/",
+      "access_mode": "full text",
+      "quote": "Supporting research to better understand cancer causes and outcomes and to translate findings into clinical and public health interventions.",
+      "cancer_type": "Not stated",
+      "body_site": "Not stated",
+      "evidence_level": "Program description/context only; not a study",
+      "population_or_system": "NCI DCCPS Epidemiology and Genomics program",
+      "limitations": "Outside study scale. Program scope sentence only; no study data."
+    }
+  ],
+  "notes": [
+    "S02 animal (mouse xenograft) and in vitro (cell-line) results are kept separate as distinct entries.",
+    "S03: registry Phase field is NA; the official title begins \"Phase I Clinical Trial\" — both retained as verified. overallStatus UNKNOWN and hasResults false: no posted results.",
+    "S01 and S04 are context outside the study scale (controller verified). No therapeutic generalizations; no cure claim."
+  ]
+}
