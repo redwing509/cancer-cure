@@ -1,0 +1,11 @@
+{
+  "url_opened": "https://www.cancer.gov/about-cancer/treatment/cam",
+  "doi": "",
+  "title": "Complementary and Alternative Medicine (CAM) - NCI",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "Complementary and alternative medicine (CAM) is the term for medical products and practices that are not part of standard medical care. People with cancer may use CAM to help cope with the side effects of cancer treatments, such as nausea, pain, and fatigue ... try to treat or cure their cancer",
+  "how_verified": "web_extract of the URL; compared recorded quote against opened page text",
+  "how_opened": "full text",
+  "limitations": "Page text was retrieved as extracted markdown; exact whitespace/line-break fidelity could not be confirmed. On the page, 'to' ends the lead-in line and the following fragments render as bullet list items, with other bullets omitted between them (the recorded quote uses '...' for those omissions). No DOI exists for this NCI web page."
+}

@@ -1,0 +1,12 @@
+{
+  "url_opened": "https://nccih.nih.gov/research/research-results/compound-in-north-american-botanical-oplopanax-horridus-inhibits-colorectal-tumor-growth-in-mouse-model-and-human-cells",
+  "doi": "",
+  "title": "Compound in North American Botanical Oplopanax horridus Inhibits Colorectal Tumor Growth in Mouse Model and Human Cells | NCCIH",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "A new compound isolated from the Pacific Northwest shrub Oplopanax horridus, sometimes called Alaskan ginseng or devil's club, showed beneficial effects on human colorectal cells in a recent laboratory study. The study, funded in part by the National Center for Complementary and Integrative Health and involving researchers from the University of Chicago and two Chinese universities—Central South University and University of Macau, was published in the journal Nutrients.",
+  "quote_en": "",
+  "how_verified": "Opened the URL with the web_extract tool and compared the recorded quote word-for-word against the page text.",
+  "how_opened": "full text",
+  "limitations": "No DOI is printed on this NCCIH page (the cited study is Zhang Z et al., Nutrients 2014;6(7):2668–2680), so the doi field is left empty and was not independently verified. The recorded quote uses '…' to elide the middle clause; every surrounding word matches the page verbatim. This page is an NCCIH research-results summary, not the journal article itself."
+}

@@ -1,0 +1,52 @@
+{
+  "queries": [
+    {"lang": "en", "query": "site:cancer.gov natural product complementary therapy cancer clinical trial"},
+    {"lang": "en", "query": "site:nccih.nih.gov cancer natural product study"},
+    {"lang": "en", "query": "site:clinicaltrials.gov natural product cancer United States"},
+    {"lang": "en", "query": "site:nih.gov cancer causes research program"},
+    {"lang": "en", "query": "open source tumor growth modeling tool united states cancer"}
+  ],
+  "sources": [
+    {
+      "url": "https://www.cancer.gov/about-cancer/treatment/cam",
+      "title": "Complementary and Alternative Medicine (CAM) - NCI",
+      "why_relevant": "Official NCI page defining CAM and listing cancer CAM clinical trials",
+      "how_opened": "full text",
+      "quote": "Complementary and alternative medicine (CAM) is the term for medical products and practices that are not part of standard medical care. People with cancer may use CAM to help cope with the side effects of cancer treatments, such as nausea, pain, and fatigue ... try to treat or cure their cancer",
+      "quote_en": "",
+      "cancer_type": "cancer (general)",
+      "body_site": "not specified"
+    },
+    {
+      "url": "https://nccih.nih.gov/research/research-results/compound-in-north-american-botanical-oplopanax-horridus-inhibits-colorectal-tumor-growth-in-mouse-model-and-human-cells",
+      "title": "Compound in North American Botanical Oplopanax horridus Inhibits Colorectal Tumor Growth in Mouse Model and Human Cells | NCCIH",
+      "why_relevant": "Official NCCIH page reporting a laboratory study of a natural product (oplopantriol A from Oplopanax horridus) against colorectal cancer",
+      "how_opened": "full text",
+      "quote": "A new compound isolated from the Pacific Northwest shrub Oplopanax horridus, sometimes called Alaskan ginseng or devil's club, showed beneficial effects on human colorectal cells in a recent laboratory study. The study, funded in part by the National Center for Complementary and Integrative Health ... was published in the journal Nutrients.",
+      "quote_en": "",
+      "cancer_type": "colorectal cancer",
+      "body_site": "colon"
+    },
+    {
+      "url": "https://clinicaltrials.gov/study/NCT01294072",
+      "title": "Study Investigating the Ability of Plant Exosomes to Deliver Curcumin to Normal and Colon Cancer Tissue",
+      "why_relevant": "Official ClinicalTrials.gov record of a Phase I trial testing plant exosome-delivered curcumin (a natural product from turmeric) for colon cancer",
+      "how_opened": "full text",
+      "quote": "This clinical trial will investigate the ability of plant exosomes to more effectively deliver curcumin to normal colon tissue and colon tumors. Curcumin is the yellow pigment of turmeric, a natural product with diverse biological activities.",
+      "quote_en": "",
+      "cancer_type": "Colon Cancer",
+      "body_site": "colon"
+    },
+    {
+      "url": "https://cancercontrol.cancer.gov/",
+      "title": "Division of Cancer Control and Population Sciences (DCCPS)",
+      "why_relevant": "Official NCI division page describing the US program for research into cancer causes, epidemiology, and prevention",
+      "how_opened": "full text",
+      "quote": "Supporting research to better understand cancer causes and outcomes and to translate findings into clinical and public health interventions.",
+      "quote_en": "",
+      "cancer_type": "cancer (general)",
+      "body_site": "not specified"
+    }
+  ],
+  "notes": "NCCIH shark cartilage negative trial page (https://nccih.nih.gov/research/results/spotlight/sharkcartilage_rr.htm) returned CRAWL_NOT_FOUND on extraction; content visible in search snippet but not opened. TumorGrowthToolkit (GitHub) found as open-source modeling tool but not counted as a fourth source per 4-source limit."
+}
