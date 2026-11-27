@@ -1,0 +1,12 @@
+{
+  "url_opened": "https://www.jspm.ne.jp/files/guideline/cam_pdf/cam01.pdf",
+  "doi": "",
+  "title": "がん補完代替医療 ガイドライン（第1版、2009年2月発行）",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "【解説】 組成：サルノコシカケ科カワラタケ由来β－ 1,4 グルカンを主要構造に持つ蛋白多糖体 剤形：散剤 適応：①術後胃がん、治癒切除後結腸・直腸がんにおける化学療法との併用 （生存期間の延長） ②小細胞肺がんにおける化学療法との併用（奏功期間の延長） … CQ-7：保険適応外使用の非特異的免疫賦活剤は生存を延長するか？ [ 推奨度：C] … クレスチンにおいて、乳がんにおける化学療法とクレスチンの併用療法に有効性は認められず [5,6,7]、食道がんにおいても生存期間に差はなく [8]、成人急性非リンパ性白血病の維持化学療法へのクレスチン併用療法で寛解期間、生存期間ともに延長は認められなかった [9]。",
+  "quote_en": "Translation: Explanation: Composition: a protein polysaccharide whose main structure is β-1,4 glucan derived from Kawaratake (Trametes/Coriolus versicolor) of the Polyporaceae family; Dosage form: powder; Indications: ① post-operative gastric cancer and post-curative-resection colon/rectal cancer in combination with chemotherapy (prolongation of survival); ② small-cell lung cancer in combination with chemotherapy (prolongation of response duration). … CQ-7: Do non-specific immune activators used off-label prolong survival? [Recommendation: C] … For Krestin (PSK), efficacy of combination with chemotherapy in breast cancer was not recognized [5,6,7]; no difference in survival in esophageal cancer [8]; in maintenance chemotherapy for adult acute non-lymphocytic leukemia, Krestin combination did not prolong remission or survival [9].",
+  "how_verified": "web_extract opened the PDF (full text saved to /srv/grokbot-hermes/home-nvidia/cache/web/www.jspm.ne.jp-6533d993ae.md); read_file of the saved full text located the クレスチン（PSK） section and each segment was compared character-by-character against the recorded quote.",
+  "how_opened": "full text",
+  "limitations": "PDF text extraction inserted whitespace (e.g., “【解説】 組成”, “β－ 1,4 グルカン”, “[ 推奨度：C]”, “ず [5,6,7]”) from character spacing/line breaks; I normalized whitespace only — no characters added, dropped, or substituted. The recorded quote’s “…” marks the genuinely omitted intervening pages (between the p.25 【解説】 block and the CQ-7 results text). Could not inspect the print layout/page image, only the text layer."
+}

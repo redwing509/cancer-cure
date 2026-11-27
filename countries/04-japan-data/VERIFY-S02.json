@@ -1,0 +1,12 @@
+{
+  "url_opened": "https://ganjoho.jp/public/dia_tre/treatment/immunotherapy/immu02.html",
+  "doi": "",
+  "title": "免疫療法 もっと詳しく：[国立がん研究センター がん情報サービス 一般の方へ]",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "「効果が証明された免疫療法」はまだ一部に限られています。また、治療法や薬ごとにがんの種類も限られているものの、保険診療（公的医療保険）で受けることができます。",
+  "quote_en": "Translation: \"Proven-effect immunotherapy\" is still limited to only some cases. Also, although the cancer types eligible are limited by treatment and by drug, these can be received under insurance-based medical care (public medical insurance).",
+  "how_verified": "Opened the URL with web_extract and compared the recorded quote against the page text; page title matched the recorded title.",
+  "how_opened": "full text",
+  "limitations": "The recorded quote also carries a date-stamped editor's note prefix (2017年05月02日 | クレスチンが経過措置品目に移行したことから関連する記述を削除しました。) that was not found on the opened page. Only the sentence portion is on the page, prefixed by これらの. The page appears revised since 2017 (table 2 is current as of 2025年10月), so the date-line may have been removed; the full recorded quote as one string is not verbatim on the current page, though its substantive sentence is verbatim."
+}

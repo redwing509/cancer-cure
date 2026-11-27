@@ -1,0 +1,50 @@
+{
+  "queries": [
+    {"lang": "ja", "query": "クレスチン PSK 癌 国立がん研究センター"},
+    {"lang": "ja", "query": "レンチナン がん 国立がん研究センター 肺がん"},
+    {"lang": "ja", "query": "漢方 がん 緩和ケア 大学 がん研究"}
+  ],
+  "sources": [
+    {
+      "url": "https://www.jspm.ne.jp/files/guideline/cam_pdf/cam01.pdf",
+      "title": "がん補完代替医療ガイドライン（第1版、2009年2月発行）",
+      "why_relevant": "Japan Palliative Care Society guideline: PSK (クレスチン) oncology indications and cautions.",
+      "how_opened": "full text",
+      "quote": "【解説】組成：サルノコシカケ科カワラタケ由来β－1,4グルカンを主要構造に持つ蛋白多糖体剤形：散剤適応：①術後胃がん、治癒切除後結腸・直腸がんにおける化学療法との併用（生存期間の延長）②小細胞肺がんにおける化学療法との併用（奏功期間の延長）…CQ-7：保険適応外使用の非特異的免疫賦活剤は生存を延長するか？[推奨度：C]…クレスチンにおいて、乳がんにおける化学療法とクレスチンの併用療法に有効性は認められず[5,6,7]、食道がんにおいても生存期間に差はなく[8]、成人急性非リンパ性白血病の維持化学療法へのクレスチン併用療法で寛解期間、生存期間ともに延長は認められなかった[9]。",
+      "quote_en": "Translation: PSK (Krestin) is a protein polysaccharide from Trametes versicolor. Approved uses: with chemotherapy for post-surgery gastric cancer and curatively resected colon/rectal cancer (extends survival), and small cell lung cancer (extends response). Off-label null findings: breast cancer (no efficacy), esophageal cancer (no survival difference), adult acute non-lymphocytic leukemia (no remission/survival extension). Recommendation grade C.",
+      "cancer_type": "胃がん（術後）、結腸・直腸がん（治癒切除後）、小細胞肺がん；適応外のnull検証：乳がん、食道がん、成人急性非リンパ性白血病",
+      "body_site": "胃・結腸・直腸・肺；null：乳・食道・血液（がん種名に含まれる部位）"
+    },
+    {
+      "url": "https://ganjoho.jp/public/dia_tre/treatment/immunotherapy/immu02.html",
+      "title": "免疫療法 もっと詳しく：[国立がん研究センター がん情報サービス 一般の方へ]",
+      "why_relevant": "NCC Japan: PSK removed from proven immunotherapy list (transitional listing, 2017).",
+      "how_opened": "full text",
+      "quote": "2017年05月02日 | クレスチンが経過措置品目に移行したことから関連する記述を削除しました。…「効果が証明された免疫療法」はまだ一部に限られています。また、治療法や薬ごとにがんの種類も限られているものの、保険診療（公的医療保険）で受けることができます。",
+      "quote_en": "",
+      "cancer_type": "UNKNOWN（クレスチンにがん種を紐付けなし）",
+      "body_site": "UNKNOWN"
+    },
+    {
+      "url": "https://ganjoho.jp/public/dia_tre/cam/health_food_products.html",
+      "title": "がんと民間療法（健康食品・サプリメント・食事療法を中心に）：[国立がん研究センター がん情報サービス 一般の方へ]",
+      "why_relevant": "NCC Japan official page: folk/complementary therapies have no proven effect on cancer itself.",
+      "how_opened": "full text",
+      "quote": "民間療法は、がんそのものへの効果は証明されていません。つまり、民間療法によって、がんが消えたり、小さくなったりすることはありません。…がんの治療に最も効果があると証明されている「標準治療」のかわりになるものはありません。",
+      "quote_en": "",
+      "cancer_type": "UNKNOWN（一般ページ、特定がん種なし）",
+      "body_site": "UNKNOWN"
+    },
+    {
+      "url": "https://mhlw-grants.niph.go.jp/project/22523",
+      "title": "がん治療の副作用軽減ならびにがん患者のＱＯＬ向上のための漢方薬の臨床応用とその作用機構の解明 | 厚生労働科学研究成果データベース",
+      "why_relevant": "MHLW grants database: Kampo 六君子湯/大建中湯 for chemo side effects and cancer cachexia.",
+      "how_opened": "full text",
+      "quote": "ヒト胃がん細胞移植がん悪液質動物モデルを用い…六君子湯は、LIF抑制ではなく、グレリン抵抗性の改善を介してがん悪液質を改善することを明らかにした。臨床研究では、膵がん患者を対象として臨床試験を開始した。加えて、シスプラチン投与に伴う嘔吐、食欲不振の六君子湯による抑制効果を検証するための第Ⅱ相臨床試験を開始した。…「シスプラチンを含む化学療法を施行される子宮がん患者の食欲不振に対する六君子湯の効果―無作為化第Ⅱ相比較試験」",
+      "quote_en": "",
+      "cancer_type": "胃がん（悪液質モデル）、膵がん、子宮がん",
+      "body_site": "UNKNOWN（ページはがん種名のみ、部位は別途未記載）"
+    }
+  ],
+  "notes": "項目(2)がんの原因に関する日本の公式プログラム・団体ページ、項目(3)日本グループのオープンソース腫瘍増殖・腫瘍モデリングツール：本ショートサーチ内では見つからず、含めず。英語での照合検索は未実施。"
+}
