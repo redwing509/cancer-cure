@@ -1,0 +1,12 @@
+{
+  "url_opened": "https://ganjoho.jp/public/dia_tre/cam/health_food_products.html",
+  "doi": "",
+  "title": "がんと民間療法（健康食品・サプリメント・食事療法を中心に）：[国立がん研究センター　がん情報サービス　一般の方へ]",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "FALSE",
+  "quote": "民間療法は、がんそのものへの効果は証明されていません。つまり、民間療法によって、がんが消えたり、小さくなったりすることはありません。民間療法にはさまざまなものがありますが、がんの治療に最も効果があると証明されている「標準治療」のかわりになるものはありません。",
+  "quote_en": "[translation] \"Alternative therapies have not been proven effective against cancer itself. In other words, alternative therapies do not make cancer disappear or shrink. Although there are various alternative therapies, there is nothing proven most effective for cancer treatment that can replace 'standard treatment'.\"",
+  "how_verified": "web_extract opened the URL and returned the page's full text",
+  "how_opened": "full text",
+  "limitations": "Only this single page was checked. The recorded quote uses '...' between the two sentences, but the opened page instead contains the intervening sentence '民間療法にはさまざまなものがありますが、', so the recorded quote as a whole is altered (the two endpoint sentences are verbatim on the page, but not adjacent). No DOI exists for this page. The page's primary/secondary source citations (footnotes ※1, ※2) were not resolved."
+}

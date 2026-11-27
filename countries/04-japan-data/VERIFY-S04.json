@@ -1,0 +1,12 @@
+{
+  "url_opened": "https://mhlw-grants.niph.go.jp/project/22523",
+  "doi": "",
+  "title": "がん治療の副作用軽減ならびにがん患者のＱＯＬ向上のための漢方薬の臨床応用とその作用機構の解明 | 厚生労働科学研究成果データベース",
+  "claim": "the recorded quote was verbatim on the opened page",
+  "verdict": "TRUE",
+  "quote": "ヒト胃がん細胞移植がん悪液質動物モデルを用い、悪液質の発症にTLR5シグナル経路の活性化、続いておこるLIF産生亢進が関与することを見出し、六君子湯は、LIF抑制ではなく、グレリン抵抗性の改善を介してがん悪液質を改善することを明らかにした。臨床研究では、膵がん患者を対象として臨床試験を開始した。加えて、シスプラチン投与に伴う嘔吐、食欲不振の六君子湯による抑制効果を検証するための第Ⅱ相臨床試験を開始した。",
+  "quote_en": "Translation: Using a human gastric cancer cell-implanted cancer cachexia animal model, we found that activation of TLR5 signaling followed by increased LIF production is involved in the onset of cachexia, and clarified that rikkunshito improves cancer cachexia not through LIF inhibition but through improvement of ghrelin resistance. In the clinical study, a clinical trial was initiated targeting pancreatic cancer patients. In addition, a phase II clinical trial was initiated to verify the suppressive effect of rikkunshito on vomiting and loss of appetite associated with cisplatin administration.",
+  "how_verified": "Opened https://mhlw-grants.niph.go.jp/project/22523 with web_extract; compared the recorded Japanese quote segment-by-segment against the page's 研究報告書（概要版） text (結果と考察 paragraph and 臨床研究 paragraph).",
+  "how_opened": "full text",
+  "limitations": "The recorded quote uses ellipses (...) between segments, so verification covers contiguous verbatim segments rather than one uninterrupted string. The segment 「シスプラチンを含む化学療法を施行される子宮がん患者の食欲不振に対する六君子湯の効果―無作為化第Ⅱ相比較試験」 appears verbatim earlier on the page (201313024A summary, 研究方法 paragraph) where the closing bracket is followed by 「プロトコール作成を行い、臨床研究に着手した。」. The omitted middle of the saved page file was not re-read; all quoted segments appeared in the returned head. This NIPH database record page carries no DOI."
+}
