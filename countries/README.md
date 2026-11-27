@@ -9,3 +9,4 @@ Each country note should also list research programs and organizations that stud
 | File | Country | Status |
 |---|---|---|
 | [01-china.md](01-china.md) | China | Citation-checked country note; opened as a PR, not merged |
+| [03-united-states.md](03-united-states.md) | United States | First bite-size slice, citation-checked; opened as a PR, not merged |
